@@ -666,6 +666,8 @@ def build_empty_context(lang: str, data: dict, profile: dict, news: list) -> dic
 
 BUILDERS = {
     "index": build_index_context,
+    # Content-only pages need no data; their template holds the markup.
+    "notes": build_empty_context,
     "schedule": build_schedule_context,
     "articles": build_articles_context,
     "cv": build_cv_context,

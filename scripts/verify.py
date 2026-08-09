@@ -28,18 +28,18 @@ EXPECTED_PAGES = [
     for spec in SITE["pages"].values()
     for lang in SITE["languages"]
     if lang in spec
-]
+] + SITE.get("extra_expected_pages", [])
 
 ALLOWED_SUFFIXES = {".html", ".css", ".js", ".ico", ".png", ".pdf", ".svg", ".jpg", ".webp"}
 
 # Lower bounds, not exact counts: they catch a truncated upstream fetch without
 # needing an update every time a paper is added.
 MINIMUM_ITEMS = [
-    (page, marker, int(minimum))
-    for page, marker, minimum in SITE.get("minimum_items", [])
+    (page, marker, int(minimum)) for page, marker, minimum in SITE.get("minimum_items", [])
 ]
 
-CHROME_EXEMPT: set[str] = set()
+# Redirect stubs carry no site chrome.
+CHROME_EXEMPT = set(SITE.get("chrome_exempt_pages", []))
 
 
 class LinkCollector(HTMLParser):
