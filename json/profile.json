@@ -1,123 +1,552 @@
 {
   "researchmap": {
-    "id": "SampleResearcher",
-    "api": "https://api.researchmap.jp/SampleResearcher",
+    "id": "KazumasaFUJIWARA",
+    "api": "https://api.researchmap.jp/KazumasaFUJIWARA",
     "url": {
-      "en": "https://researchmap.jp/SampleResearcher",
-      "ja": "https://researchmap.jp/SampleResearcher"
+      "en": "https://researchmap.jp/KazumasaFUJIWARA/?lang=english",
+      "ja": "https://researchmap.jp/KazumasaFUJIWARA/?lang=japanese"
     }
   },
   "personal_info": {
     "sex": {
-      "en": "Female",
-      "ja": "女性"
+      "en": "Male",
+      "ja": "男性"
     }
   },
   "address": {
     "office": {
-      "en": "Room 101, Building A",
-      "ja": "A棟 101研究室"
+      "ja": "龍谷大学 瀬田学舎 1号館 501研究室",
+      "en": "Room 501, Building 1, Seta Campus, Ryukoku University",
+      "it": "Studio 501, Edificio 1, Seta Campus, Ryukoku Università"
     },
     "location": {
-      "en": "1-1 Example, Example City",
-      "ja": "例県例市例町1-1"
+      "ja": "滋賀県大津市瀬田大江町横谷1−5",
+      "en": "Faculty of Advanced Science and Technology, Ryukoku University, 1-5 Yokotani, Seta Oe-cho, Otsu, Shiga, Japan",
+      "it": "Facoltà di Scienze e Tecnologie Avanzate, Ryukoku Università, 1-5 Yokotani, Seta Oe-cho, Otsu, Shiga, Giappone"
     },
-    "postal_code": "000-0000",
-    "phone": "000-000-0000"
+    "postal_code": "520-2194",
+    "phone": "077-543-7503"
   },
   "contact": {
     "google_form": {
-      "url": "https://example.org/contact-form",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSei82qCoVuWyqJpi9Hx4D_IN9TIiVnjvydtZ0NTaW_F8QCN7w/viewform",
       "label": {
-        "en": "Contact form",
-        "ja": "お問い合わせフォーム"
+        "ja": "お問い合わせ（Googleフォーム）",
+        "en": "Contact (Google Form)"
       },
       "note": {
-        "en": "Email is not published.",
-        "ja": "メールアドレスは非公開です。"
+        "ja": "メールアドレスはスパム対策のため非公開です。フォームよりご連絡ください。",
+        "en": "Email addresses are not published due to spam protection. Please use the form below."
       }
     }
   },
   "degrees": [
     {
-      "type": "doctor",
-      "date": "2017-03-15",
+      "type": "bachelor",
+      "date": "2012-03-15",
       "supervisor": {
-        "en": "Professor Example",
-        "ja": "例 教授"
+        "ja": "小澤 徹 先生",
+        "en": "Professor Tetsu Ozawa"
       }
     },
     {
       "type": "master",
       "date": "2014-03-15",
       "supervisor": {
-        "en": "Professor Example",
-        "ja": "例 教授"
+        "ja": "小澤 徹 先生",
+        "en": "Professor Tetsu Ozawa"
+      }
+    },
+    {
+      "type": "doctor",
+      "date": "2017-03-15",
+      "supervisor": {
+        "ja": "小澤 徹 先生",
+        "en": "Professor Tetsu Ozawa"
       }
     }
   ],
   "organization": [
     {
-      "label": {
-        "en": "Seminar organiser",
-        "ja": "セミナー世話人"
-      },
       "date": {
-        "en": "From April 2022",
-        "ja": "2022年4月--"
+        "en": "January 2022",
+        "ja": "2022年1月--"
+      },
+      "label": {
+        "en": "Mathematical Analysis of Nonlinear Dispersive and Wave Equations\n - In honor of Professor Tohru Ozawa's 60th birthday -",
+        "ja": "Mathematical Analysis of Nonlinear Dispersive and Wave Equations\n - In honor of Professor Tohru Ozawa's 60th birthday -"
       },
       "place": {
-        "en": "Example University",
-        "ja": "例大学"
+        "en": "Waseda University",
+        "ja": "早稲田大学"
+      }
+    },
+    {
+      "date": {
+        "en": "21st February 2019",
+        "ja": "2019年2月21日"
+      },
+      "label": {
+        "en": "PDE Workshop, Waseda -GSSI, L'Aquila-Pisa",
+        "ja": "PDE Workshop, Waseda -GSSI, L'Aquila-Pisa"
+      },
+      "place": {
+        "en": "University of Pisa",
+        "ja": "Pisa大学"
+      }
+    },
+    {
+      "date": {
+        "en": "From October 2018",
+        "ja": "2018年10月----"
+      },
+      "label": {
+        "en": "Homepage of Group Dispersive PDE",
+        "ja": "Homepage of Grope Dispersive PDE"
+      }
+    },
+    {
+      "date": {
+        "en": "23rd February 2018",
+        "ja": "2018年2月23日"
+      },
+      "label": {
+        "en": "Workshop on Harmonic Analysis and Nonliner Evolution Equations",
+        "ja": "Workshop on Harmonic Analysis and Nonliner Evolution Equations"
+      },
+      "place": {
+        "en": "University of Pisa",
+        "ja": "Pisa大学"
+      }
+    },
+    {
+      "date": {
+        "en": "5th September 2018",
+        "ja": "2018年9月5日"
+      },
+      "label": {
+        "en": "Workshop Dispersive properties of Schrodinger and wave equations with perturbation",
+        "ja": "Workshop Dispersive properties of Schrodinger and wave equations with perturbation"
+      },
+      "place": {
+        "en": "University of Pisa",
+        "ja": "Pisa大学"
+      }
+    },
+    {
+      "date": {
+        "en": "From April 2023",
+        "ja": "2023年4月--"
+      },
+      "label": {
+        "en": "Kyoto Ekimae Seminar",
+        "ja": "京都駅前セミナー"
+      },
+      "place": {
+        "en": "Ryukoku University",
+        "ja": "龍谷大学"
+      }
+    },
+    {
+      "date": {
+        "en": "1 October 2020 -- April 2023",
+        "ja": "2020年10月1日--2023年4月"
+      },
+      "label": {
+        "en": "Nagoya Differential Equations Seminar",
+        "ja": "名古屋微分方程式セミナー"
+      },
+      "place": {
+        "en": "Nagoya University",
+        "ja": "名古屋大学"
+      }
+    },
+    {
+      "date": {
+        "en": "8 March 2021 -- April 2023",
+        "ja": "2021年3月8日--2023年4月"
+      },
+      "label": {
+        "en": "Nagoya Differential Equations Workshop",
+        "ja": "名古屋微分方程式研究集会"
+      },
+      "place": {
+        "en": "Nagoya University",
+        "ja": "名古屋大学"
+      }
+    },
+    {
+      "date": {
+        "en": "1 April 2019 -- 31 September 2020",
+        "ja": "2019年4月1日--2020年9月31日"
+      },
+      "label": {
+        "en": "Applied Mathematical Analysis Seminar",
+        "ja": "応用数理解析セミナー"
+      },
+      "place": {
+        "en": "Tohoku University",
+        "ja": "東北大学"
       }
     }
   ],
-  "job": [],
-  "grants": [],
-  "awards": [],
+  "academic_visits": [
+    {
+      "date": {
+        "en": "7th October 2015 -- 8th December 2015",
+        "ja": "2015年10月7日 -- 2015年12月8日"
+      },
+      "place": {
+        "en": "Department of Mathematics, University of Pisa",
+        "ja": "Pisa大学 数学科"
+      },
+      "note": {
+        "en": "Supported by Waseda University TGU Project",
+        "ja": "早稲田大学 SGU数物系科学拠点により御支援戴きました。"
+      }
+    },
+    {
+      "date": {
+        "en": "3rd October 2016 -- 4th February 2017",
+        "ja": "2016年10月3日 -- 2017年2月4日"
+      },
+      "place": {
+        "en": "Department of Mathematics, University of Pisa",
+        "ja": "Pisa大学 数学科"
+      },
+      "note": {
+        "en": "Supported by Waseda University TGU Project",
+        "ja": "早稲田大学 SGUプロジェクトにより御支援戴きました。"
+      }
+    },
+    {
+      "date": {
+        "en": "16th December 2019 -- 7th January 2020",
+        "ja": "2019年12月16日 -- 2020年1月7日"
+      },
+      "place": {
+        "en": "Department of Mathematics, University of Pisa",
+        "ja": "Pisa大学 数学科"
+      },
+      "note": {
+        "en": "",
+        "ja": ""
+      }
+    },
+    {
+      "date": {
+        "en": "8th January 2020 -- 8th February 2020",
+        "ja": "2020年1月8日 -- 2020年2月8日"
+      },
+      "place": {
+        "en": "Department of Mathematics, University of Bari",
+        "ja": "Bari大学 数学科"
+      },
+      "note": {
+        "en": "",
+        "ja": ""
+      }
+    }
+  ],
+  "awards": [
+    {
+      "rm:id": "3417164",
+      "note": {
+        "en": "Recommended by The Mathematical Society of Japan",
+        "ja": "日本数学会にご推薦いただきました"
+      }
+    }
+  ],
+  "postersession": [
+    {
+      "rm:id": "11728040"
+    }
+  ],
+  "job": [
+    {
+      "rm:id": "20779945",
+      "note": "担当：数学演習A"
+    },
+    {
+      "rm:id": "20779941",
+      "note": "担当：物理II(b)"
+    }
+  ],
+  "grants": [
+    {
+      "rm:id": "46169311",
+      "note": "<a href='https://www.jsps.go.jp/j-grantsinaid/36_dokuritsu_kiban/download.html'>独立基盤形成支援（試行）</a>"
+    },
+    {
+      "rm:id": "13359271",
+      "institution": {
+        "ja": "早稲田大学",
+        "en": "Waseda University"
+      },
+      "see_also": {
+        "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-19J00334/",
+        "label": {
+          "en": "KAKEN",
+          "ja": "KAKEN"
+        }
+      }
+    },
+    {
+      "rm:id": "13359270",
+      "institution": {
+        "ja": "早稲田大学",
+        "en": "Waseda University"
+      },
+      "note": "育志賞",
+      "see_also": {
+        "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-16J30008/",
+        "label": {
+          "en": "KAKEN",
+          "ja": "KAKEN"
+        }
+      }
+    },
+    {
+      "rm:id": "13359269",
+      "institution": {
+        "ja": "早稲田大学",
+        "en": "Waseda University"
+      },
+      "see_also": {
+        "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-14J07371/",
+        "label": {
+          "en": "KAKEN",
+          "ja": "KAKEN"
+        }
+      }
+    }
+  ],
   "office_hours": [
     {
-      "day": "Wednesday",
-      "time": "13:00-15:00"
+      "day": "月",
+      "time": "12:30-13:30"
+    },
+    {
+      "day": "木",
+      "time": "12:30-13:00"
     }
   ],
   "google_calendar": [
     {
-      "id": "sample@group.calendar.google.com",
-      "name": "Lectures",
+      "id": "c_54bd1de4eab01e8425f3c01b942c3f7961079dfadbcdd99b0223d0d23a956838@group.calendar.google.com",
+      "name": "担当講義",
       "color": "#005500"
+    },
+    {
+      "id": "c_5add6f8cf34502d6ee3d9e72bf6618cc7b3f9861ca0fcdeb5c193ec0b498623b@group.calendar.google.com",
+      "name": "京都駅前セミナー",
+      "color": "#E65100"
+    },
+    {
+      "id": "c_ca85887dd6128f33bce6ed0779c66471a9592b6fd40be6ffa24caf74ba18397b@group.calendar.google.com",
+      "name": "大学行事（対内）",
+      "color": "#1565C0",
+      "note": "空き時間のみ表示",
+      "freeBusyOnly": true
+    },
+    {
+      "id": "c_06817699bc91d39ad8c10289d889394db1c57b4dafa09028ff16b0bd79da5134@group.calendar.google.com",
+      "name": "その他の予定",
+      "color": "#6A1B9A",
+      "note": "空き時間のみ表示",
+      "freeBusyOnly": true
+    },
+    {
+      "id": "mail.ryukoku.ac.jp_hl1ei45shs1knrpqnop4gndtbg@group.calendar.google.com",
+      "name": "[非公式] 龍谷大学(深草・大宮・瀬田学舎)",
+      "color": "#546E7A",
+      "note": "樋口三郎先生より借用しております",
+      "link": "https://www.data.math.ryukoku.ac.jp/index.php#access"
     }
   ],
   "warning": {
-    "en": "Repositories below are provided as-is.",
-    "ja": "以下のリポジトリは無保証です。"
+    "ja": "本レポジトリは情報提供のみを目的としており、その正確性、完全性、有用性についていかなる保証も行いません。本レポジトリの利用または利用不能によって発生した損害（直接的・間接的を問わず）について、管理者は一切責任を負いません。利用者ご自身の判断と責任でご利用ください。",
+    "en": "This repository is only for information purposes and does not guarantee the accuracy, completeness, or usefulness of the information. The administrator is not responsible for any damages (including direct and indirect) arising from the use or inability to use this repository. Please use it at your own judgment and responsibility."
   },
   "researcher_links": [
     {
       "label": {
-        "en": "ORCID",
-        "ja": "ORCID"
+        "ja": "ORCID",
+        "en": "ORCID"
       },
-      "url": "https://orcid.org/0000-0000-0000-0000"
+      "url": "https://orcid.org/0000-0002-3796-4570"
+    },
+    {
+      "label": {
+        "ja": "Research Gate",
+        "en": "Research Gate"
+      },
+      "url": "https://www.researchgate.net/profile/Kazumasa_Fujiwara"
+    },
+    {
+      "label": {
+        "ja": "Mathscinet: MR Author ID: 1050069",
+        "en": "Mathscinet: MR Author ID: 1050069"
+      },
+      "url": "https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1050069"
+    },
+    {
+      "label": {
+        "ja": "日本の研究.com",
+        "en": "Japan Research.com"
+      },
+      "url": "https://research-er.jp/researchers/view/714495"
+    },
+    {
+      "label": {
+        "ja": "researchmap",
+        "en": "researchmap"
+      },
+      "url": "https://researchmap.jp/KazumasaFUJIWARA/?lang=japanese"
+    },
+    {
+      "label": {
+        "ja": "zbMATH",
+        "en": "zbMATH"
+      },
+      "url": "https://zbmath.org/authors/?q=ai:fujiwara.kazumasa"
     }
   ],
   "institution_links": [
     {
       "label": {
-        "en": "Example University",
-        "ja": "例大学"
+        "ja": "龍谷大学",
+        "en": "Ryukoku University"
       },
-      "url": "https://example.org/"
+      "url": "",
+      "children": [
+        {
+          "label": {
+            "ja": "先端理工学部 数理・情報科学課程",
+            "en": "Advanced Science and Technology Department"
+          },
+          "url": "https://www.math.ryukoku.ac.jp/"
+        },
+        {
+          "label": {
+            "ja": "京都駅前セミナー",
+            "en": "Kyoto Ekimae Seminar"
+          },
+          "url": "https://morita.math.ryukoku.ac.jp/www-morita/KES/kes_top.html"
+        }
+      ]
+    },
+    {
+      "label": {
+        "ja": "名古屋大学",
+        "en": "Nagoya University"
+      },
+      "url": "http://www.nagoya-u.ac.jp/",
+      "children": [
+        {
+          "label": {
+            "ja": "大学院多元数理科学研究科",
+            "en": "Graduate School of Mathematics, Nagoya University"
+          },
+          "url": "https://www.math.nagoya-u.ac.jp/"
+        },
+        {
+          "label": {
+            "ja": "名古屋微分方程式セミナー",
+            "en": "Nagoya Differential Equations Seminar"
+          },
+          "url": "https://www.math.nagoya-u.ac.jp/~jkato/NDES/"
+        }
+      ]
+    },
+    {
+      "label": {
+        "ja": "東北大学",
+        "en": "Tohoku University"
+      },
+      "url": "https://www.tohoku.ac.jp/japanese/",
+      "children": [
+        {
+          "label": {
+            "ja": "東北大学大学院理学研究科数学専攻",
+            "en": "Graduate School of Science, Tohoku University"
+          },
+          "url": "https://www.math.tohoku.ac.jp/"
+        }
+      ]
+    },
+    {
+      "label": {
+        "ja": "ピサ高等師範学校(Scuola Normale Superiore)",
+        "en": "Scuola Normale Superiore"
+      },
+      "url": "https://www.sns.it/",
+      "children": [
+        {
+          "label": {
+            "ja": "Ennio de Giorgi 数学研究所",
+            "en": "Ennio de Giorgi Mathematical Institute"
+          },
+          "url": "http://crm.sns.it/"
+        },
+        {
+          "label": {
+            "ja": "Junior Visiting Position",
+            "en": "Junior Visiting Position"
+          },
+          "url": "https://en.sns.it/bando/research-contracts-named-%E2%80%9Cjunior-visiting-positions%E2%80%9D-field-mathematics"
+        }
+      ]
+    },
+    {
+      "label": {
+        "ja": "早稲田大学",
+        "en": "Waseda University"
+      },
+      "url": "https://www.waseda.jp/top/",
+      "children": [
+        {
+          "label": {
+            "ja": "早稲田大学先進理工学部",
+            "en": "Advanced Science and Technology Department"
+          },
+          "url": "http://www.ase.sci.waseda.ac.jp/index.html"
+        },
+        {
+          "label": {
+            "ja": "応用解析研究会",
+            "en": "Applied Analysis Research Group"
+          },
+          "url": "http://www.ozawa.phys.waseda.ac.jp/sams/"
+        }
+      ]
     }
   ],
   "github": [
     {
-      "title": "Sample",
+      "title": "藤原和将のGitHub",
+      "url": "https://github.com/KazumasaFUJIWARA",
       "repository": [
         {
-          "title": "sample-repo",
-          "url": "https://github.com/example/sample-repo",
-          "description": "A sample repository."
+          "title": "[非公式] 卒業論文 TeXスタイル",
+          "url": "https://github.com/KazumasaFUJIWARA/rgt",
+          "description": "予告なく書式を変更する可能性があります。"
+        },
+        {
+          "title": "quiz_handler",
+          "url": "https://github.com/KazumasaFUJIWARA/quiz_handler",
+          "description": "TeXで生成した問題の回答欄に学籍番号を読み取るマークシートを配置します。印刷後に回答されたマークシートを読み取り、回答を採点します。読み取り部分は中邨光太氏に協力いただきました。ソースは最適化されていません。また、稀に読み取りに失敗することがあります。"
+        }
+      ]
+    },
+    {
+      "title": "龍谷大学DXチーム",
+      "url": "https://github.com/RyukokuDX",
+      "repository": [
+        {
+          "title": "AttendanceManager",
+          "url": "https://github.com/RyukokuDX/AttendanceManager",
+          "description": "学生証の読み込みに応じて出席を管理するapiサーバーのdockerコンテナと読み取りスクリプトです。"
         }
       ]
     }

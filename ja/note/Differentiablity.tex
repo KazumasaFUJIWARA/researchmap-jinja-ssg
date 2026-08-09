@@ -1,0 +1,199 @@
+%Author K.FUJIWARA
+\documentclass{bxjsarticle}
+%[[[ TeX setting
+%[[[ package
+\usepackage{zxjatype}
+\usepackage{amsmath,amsthm}
+\usepackage{unicode-math}
+\usepackage{fontspec}
+\setCJKmainfont{MogaExMincho}
+\setmathfont{NewComputerModernMath}
+\usepackage[xetex]{graphicx}
+\usepackage[xetex]{animate}
+%]]]
+
+%[[[ env setting
+\newtheorem{Theorem}{Theorem}%[section]
+\newtheorem{Definition}[Theorem]{Definition}
+\newtheorem{Corollary}[Theorem]{Corollary}
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Proposition}[Theorem]{Proposition}
+\newtheorem{Remark}{Remark}%[section]
+%\addtolength{\textwidth}{5.cm}
+%\addtolength{\textheight}{4cm}
+%]]]
+%]]]
+
+%[[[ doc
+\begin{document}
+
+\title{全微分可能性の補足}
+\author{藤原和将}
+\date{2021年11月10日}
+\maketitle
+
+%[[[ Intro
+$D ⊂ ℝ^2$ ($D ∋ \{0\}$)を開集合とする.
+$f: D → ℝ$が原点に於いて全微分可能であるとは,
+$f$が２つの定数$A, B$を伴って,
+	\[
+	f(x,y)
+	=Ax + By + o(|(x,y)|)
+	\]
+を満たす事である.
+このノートでは,
+原点に於ける全微分可能性の判定方法に就いて見る.
+
+$f$が原点で全微分可能である事を判定する方法として,
+次がよく用いられる.
+
+%[[[ Proposition : Hantei
+\begin{Proposition}
+\label{P:C1}
+$f ∈ C^1(D)$ならば$f$は原点で全微分可能である.
+特に,
+	\[
+	A = ∂_x f(0,0),\quad
+	B = ∂_y f(0,0)
+	\]
+である.
+\end{Proposition}
+%]]]
+
+一方で, $f$の極座標表示が特定の形をしているならば,
+原点での全微分可能性の判定は容易である.
+
+%[[[ Proposition : kyokuzahyou
+\begin{Proposition}
+\label{P:Rad}
+$φ: [-π,π] → ℝ$が$φ(-π)=φ(π)$を満たすとする.
+$f : ℝ^2 → ℝ$を
+	\[
+	f(r \cos θ, r \sin θ) = r φ (θ)
+	\]
+で与える.
+この時, $f$が原点に於いて全微分可能である事と
+	\begin{align}
+	f(x,y) = A x + B y
+	\label{eq:1}
+	\end{align}
+なる実数$A,B$が存在する事は同値である.
+\end{Proposition}
+
+%[[[ Remark : r φ
+\begin{Remark}
+上の命題を言い換えれば,
+$f$が原点に於いて全微分可能である事と, $φ(θ) = A \cos θ + B \sin θ$である事が同値である.
+また, $f$が原点に於いて全微分可能である事と,
+$f$のグラフが原点を含む平面となることが同値である.
+特に, 原点で全微分可能であるならば,
+$f$は$ℝ^2$上至る所全微分可能である.
+\end{Remark}
+%]]]
+
+\begin{proof}
+\eqref{eq:1}ならば,
+全微分可能性の定義より$f$は全微分可能である.
+$f$が全微分可能であるならば,
+２つの実数$A,B$が存在して,
+	\[
+	f(r \cos θ, r \sin θ) - f(0,0)
+	= ( A \cos θ + B \sin θ ) r + o(r)
+	\]
+である.
+$f(0,0)=0$なので,
+	\begin{align*}
+	φ(θ)
+	&= \lim_{r ↘ 0} \frac{f(r \cos θ, r \sin θ)-f(0,0)}{r}\\
+	&= \lim_{r ↘ 0} \frac{( A \cos θ + B \sin θ ) r + o(r)}{r}\\
+	&= A \cos θ + B \sin θ
+	\end{align*}
+であるから,
+$o(r)=0$である.
+従って, $f(x,y)=Ax+By$を得る.
+\end{proof}
+%]]]
+
+%[[[ Remark : 例
+\begin{Remark}
+上記命題より, 例えば,
+	\[
+	b(x,y) =
+	\begin{cases}
+	\frac{x^3+y^3}{x^2+y^2}
+	&\mathrm{if} \quad (x,y) ≠ 0,\\
+	0
+	&\mathrm{if} \quad (x,y) = 0
+	\end{cases}
+	\]
+は原点に於いて連続且つ偏微分可能であるが, 全微分不能である.
+実際
+	\[
+	b(r \cos θ, r \sin θ)
+	= r ( \cos^3 θ + \sin^3 θ)
+	\]
+である.
+$b(x,y)$は一次式ではないので,
+$b$は原点に於いて全微分不能である.
+偏導関数が原点で不連続になっている事は,
+Proposition \ref{P:C1}の対偶命題から従う.
+また, Remark 4の計算から直接見て取れる.
+\end{Remark}
+%]]]
+
+%[[[ Remark
+\begin{Remark}
+$F$を$f$の極座標表示とすれば,
+	\begin{align*}
+	\frac{∂}{∂x} f(0,0)
+	&= \frac{∂}{∂ r} F(0,0) = φ(0),\\
+	\frac{∂}{∂y} f(0,0)
+	&= \frac{∂}{∂ r} F(0,π/2) = φ(π/2)
+	\end{align*}
+である.
+\end{Remark}
+%]]]
+
+%[[[ Remark
+\begin{Remark}
+上記命題で$φ$が微分可能な場合に於いて,
+$f$の偏導関数の挙動を見てみよう.
+$F$を$f$の極座標表示とすれば,
+$(x,y) ≠ (0,0)$に於いて
+	\begin{align*}
+	\frac{∂}{∂x} f(x,y)
+	&= \cos θ \frac{∂}{∂ r} F(r,θ) - \frac{\sin θ}{r} \frac{∂}{∂ θ} F(r,θ)\\
+	&= φ(θ) \cos θ - φ'(θ) \sin θ,\\
+	\frac{∂}{∂y} f(x,y)
+	&= \sin θ \frac{∂}{∂ r} F(r,θ) + \frac{\cos θ}{r} \frac{∂}{∂ θ} F(r,θ)\\
+	&= φ(θ) \sin θ + φ'(θ) \cos θ
+	\end{align*}
+である.
+もし, 上記２つの偏導関数が原点に於いて連続であるならば,
+２つの偏導関数は$θ$に依存しない.
+即ち,
+	\[
+	φ(θ) \cos θ - φ'(θ) \sin θ = A,\quad
+	φ(θ) \sin θ + φ'(θ) \cos θ = B
+	\]
+なる定数$A,B$が存在する.
+	\[
+	φ(θ)
+	= \cos θ \big\{ φ(θ) \cos θ - φ'(θ) \sin θ \}
+	+ \sin θ \big\{ φ(θ) \sin θ + φ'(θ) \cos θ \}
+	= A \cos θ + B \sin θ
+	\]
+より, Proposition \ref{P:C1}とProposition \ref{P:Rad}の関係が分かる.
+\end{Remark}
+%]]]
+
+\noindent
+{\bf 参考}\\
+鈴木 武, 柴田 良弘, 田中 和永 , 山田 義雄 著,
+理工系のための微分積分I,
+2007/4/1 内田老鶴圃出版
+(ISBN: 4753601811)
+
+
+\end{document}
+%]]]

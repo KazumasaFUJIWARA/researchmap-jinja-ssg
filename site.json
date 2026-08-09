@@ -5,11 +5,12 @@
   ],
   "ja_only_pages": [
     "lectures.html",
+    "notes.html",
     "schedule.html"
   ],
   "footer_name": {
-    "en": "Jane Q. Researcher",
-    "ja": "研究 花子"
+    "en": "Kazumasa Fujiwara",
+    "ja": "藤原和将"
   },
   "to_top_label": {
     "en": "To Top",
@@ -22,10 +23,6 @@
   "lang_switch_label": {
     "en": "日本語",
     "ja": "English"
-  },
-  "supervisor_label": {
-    "en": "Professor",
-    "ja": "指導教員"
   },
   "nav": {
     "en": [
@@ -80,6 +77,11 @@
         "href": "lectures.html",
         "label": "講義",
         "key": "lectures"
+      },
+      {
+        "href": "notes.html",
+        "label": "ノート",
+        "key": "notes"
       },
       {
         "href": "schedule.html",
@@ -179,16 +181,16 @@
       "filename": "index.html",
       "nav_key": "home",
       "en": {
-        "title": "Homepage of Jane Researcher",
-        "description": "Homepage of Jane Researcher",
-        "keywords": "Jane Researcher, mathematics",
-        "og_description": "Homepage of Jane Researcher, with CV and publication list."
+        "title": "Homepage of Kazumasa Fujiwara",
+        "description": "Homepage of Kazumasa Fujiwara",
+        "keywords": "Kazumasa,Fujiwara,Kazumasa Fujiwara",
+        "og_description": "This is a homepage of Fujiwara Kazumasa. Here my CV and publication list are posted."
       },
       "ja": {
-        "title": "研究花子 - 例大学",
-        "description": "研究花子のホームページ",
-        "keywords": "研究花子, 数学, 例大学",
-        "og_description": "研究花子のホームページです。"
+        "title": "藤原和将 - 龍谷大学",
+        "description": "藤原和将のホームページ",
+        "keywords": "藤原和将, 数学, 龍谷大学",
+        "og_description": "藤原和将のホームページです。経歴や研究業績などを掲載しています。"
       }
     },
     "talks": {
@@ -196,15 +198,15 @@
       "filename": "talks.html",
       "nav_key": "talks",
       "en": {
-        "title": "Jane Researcher - Talks",
-        "description": "Talks by Jane Researcher",
-        "keywords": "Jane Researcher, talks",
-        "og_description": "Conference presentations and seminars."
+        "title": "Kazumasa Fujiwara - Talks",
+        "description": "Kazumasa Fujiwara's Talks",
+        "keywords": "Kazumasa Fujiwara, Mathematics, Ryukoku University",
+        "og_description": "Kazumasa Fujiwara's Talks. Conference presentations, seminars, etc."
       },
       "ja": {
-        "title": "講演 - 研究花子",
-        "description": "研究花子の講演リスト",
-        "keywords": "研究花子, 講演, 学会発表",
+        "title": "講演 - 藤原和将",
+        "description": "藤原和将の講演リスト",
+        "keywords": "藤原和将, 講演, 学会発表",
         "og_description": null
       }
     },
@@ -213,15 +215,15 @@
       "filename": "articles.html",
       "nav_key": "articles",
       "en": {
-        "title": "Articles - Jane Researcher",
-        "description": "Publications by Jane Researcher",
-        "keywords": "Jane Researcher, publications, papers",
-        "og_description": "Research papers and conference proceedings."
+        "title": "Articles - Kazumasa Fujiwara",
+        "description": "List of publications by Kazumasa Fujiwara",
+        "keywords": "Kazumasa Fujiwara, publications, papers, mathematics",
+        "og_description": "List of publications by Kazumasa Fujiwara. Research papers, conference proceedings, etc."
       },
       "ja": {
-        "title": "論文 - 研究花子",
-        "description": "研究花子の論文リスト",
-        "keywords": "研究花子, 論文, 研究業績",
+        "title": "論文 - 藤原和将",
+        "description": "藤原和将の論文リスト",
+        "keywords": "藤原和将, 論文, 研究業績",
         "og_description": null
       }
     },
@@ -230,16 +232,16 @@
       "filename": "cv.html",
       "nav_key": "cv",
       "en": {
-        "title": "Jane Researcher - Curriculum Vitae",
-        "description": "Curriculum vitae of Jane Researcher",
-        "keywords": "Jane Researcher, curriculum vitae",
-        "og_description": "Academic career and research activities."
+        "title": "Kazumasa Fujiwara - Curriculum Vitae",
+        "description": "Kazumasa Fujiwara's Curriculum Vitae",
+        "keywords": "Kazumasa Fujiwara, Mathematics, Ryukoku University",
+        "og_description": "Kazumasa Fujiwara's Curriculum Vitae. Academic career, research activities, etc."
       },
       "ja": {
-        "title": "履歴書 - 研究花子",
-        "description": "研究花子の履歴書",
-        "keywords": "研究花子, 履歴書",
-        "og_description": "研究花子の履歴書"
+        "title": "履歴書 - 藤原和将",
+        "description": "藤原和将の履歴書",
+        "keywords": "藤原和将, 数学, 龍谷大学, 履歴書",
+        "og_description": "藤原和将の履歴書"
       }
     },
     "lectures": {
@@ -248,9 +250,32 @@
       "nav_key": "lectures",
       "rule": false,
       "ja": {
-        "title": "講義 - 研究花子",
-        "description": "研究花子の講義情報",
-        "keywords": "研究花子, 講義, 授業",
+        "title": "講義 - 藤原和将",
+        "description": "藤原和将の講義情報",
+        "keywords": "藤原和将, 講義, 授業",
+        "og_description": null
+      }
+    },
+    "notes": {
+      "template": "notes.jinja",
+      "filename": "notes.html",
+      "nav_key": "notes",
+      "ja": {
+        "title": "ノート・シミュレーション - 藤原和将",
+        "description": "数値シミュレーション・講義の補助資料",
+        "keywords": "藤原和将, 講義, 補助資料, 数値シミュレーション, 連成振動",
+        "og_description": null
+      }
+    },
+    "note_differentiability": {
+      "template": "note_differentiability.jinja",
+      "filename": "note/Differentiablity.html",
+      "nav_key": "notes",
+      "rule": false,
+      "ja": {
+        "title": "全微分可能性の補足",
+        "description": "全微分可能性の補足",
+        "keywords": "藤原和将, 講義, 補助資料, 全微分可能性",
         "og_description": null
       }
     },
@@ -260,9 +285,9 @@
       "nav_key": "schedule",
       "rule": false,
       "ja": {
-        "title": "予定 - 研究花子",
-        "description": "研究花子の予定",
-        "keywords": "研究花子, 予定",
+        "title": "予定 - 藤原和将",
+        "description": "藤原和将の予定",
+        "keywords": "藤原和将, 数学, 龍谷大学, 予定",
         "og_description": null
       }
     },
@@ -271,34 +296,114 @@
       "filename": "links.html",
       "nav_key": "links",
       "en": {
-        "title": "Links - Jane Researcher",
-        "description": "Links from Jane Researcher",
-        "keywords": "Jane Researcher, links",
-        "og_description": "Links from Jane Researcher"
+        "title": "Links - Kazumasa Fujiwara",
+        "description": "Kazumasa Fujiwara's Links",
+        "keywords": "Kazumasa Fujiwara, Mathematics, Ryukoku University, Links",
+        "og_description": "Kazumasa Fujiwara's Links"
       },
       "ja": {
-        "title": "リンク - 研究花子",
-        "description": "研究花子のリンク",
-        "keywords": "研究花子, リンク",
-        "og_description": "研究花子のリンク"
+        "title": "リンク - 藤原和将",
+        "description": "藤原和将のリンク",
+        "keywords": "藤原和将, 数学, 龍谷大学, リンク",
+        "og_description": "藤原和将のリンク"
       }
     }
   },
-  "theses": [],
+  "theses": [
+    {
+      "kind": "doctor",
+      "entry_type": "phdthesis",
+      "cite_key": "fujiwara_phd",
+      "title": {
+        "en": "Mathematical foundations of semirelativistic nonlinear fields",
+        "ja": "半相対論的非線形場の数学的基礎"
+      },
+      "authors": {
+        "en": "Kazumasa Fujiwara",
+        "ja": "藤原 和将"
+      },
+      "bibtex_author": "Fujiwara, Kazumasa",
+      "pdf": "DoctorThesis.pdf",
+      "label": {
+        "en": "Doctor Thesis",
+        "ja": "博士論文"
+      }
+    },
+    {
+      "kind": "master",
+      "entry_type": "mastersthesis",
+      "cite_key": "fujiwara_master",
+      "title": {
+        "en": "The well-posedness for semirelativistc systems",
+        "ja": "半相対論的系の適切性"
+      },
+      "authors": {
+        "en": "Kazumasa Fujiwara",
+        "ja": "藤原 和将"
+      },
+      "bibtex_author": "Fujiwara, Kazumasa",
+      "pdf": "MasterThesis.pdf",
+      "label": {
+        "en": "Master Thesis",
+        "ja": "修士論文"
+      }
+    }
+  ],
   "verbatim_assets": [
-    "styles.css",
-    "dark.css"
+    "DoctorThesis.pdf",
+    "MasterThesis.pdf",
+    "dark.css",
+    "favicon.ico",
+    "home_i.html",
+    "home_j.html",
+    "ja/note/Differentiablity.pdf",
+    "ja/ryukoku_logo.png",
+    "styles.css"
+  ],
+  "relocated_assets": [],
+  "extra_expected_pages": [
+    "home_i.html",
+    "home_j.html"
+  ],
+  "chrome_exempt_pages": [
+    "home_i.html",
+    "home_j.html"
   ],
   "minimum_items": [
     [
       "articles.html",
       "paper-item",
-      2
+      30
+    ],
+    [
+      "ja/articles.html",
+      "paper-item",
+      30
     ],
     [
       "talks.html",
       "talk-card",
-      2
+      50
+    ],
+    [
+      "ja/talks.html",
+      "talk-card",
+      50
+    ],
+    [
+      "ja/lectures.html",
+      "talk-card",
+      5
+    ],
+    [
+      "cv.html",
+      "card",
+      10
+    ],
+    [
+      "ja/cv.html",
+      "card",
+      20
     ]
   ]
 }

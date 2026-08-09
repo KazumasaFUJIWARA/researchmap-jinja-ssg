@@ -35,15 +35,16 @@ STRINGS = SITE["strings"]
 PAGES = SITE["pages"]
 THESES = SITE["theses"]
 
-# Pages that exist only in one language; their language switch falls back to
-# the other language's top page.
+# Pages that exist only in Japanese; their language switch falls back to the
+# English top page (js/header.js).
 JA_ONLY = set(SITE["ja_only_pages"])
 
 # Files copied verbatim into dist/, relative to the repository root.
 VERBATIM = tuple(SITE["verbatim_assets"])
 
 # (source, destination) for files the site links to but does not keep beside
-# the pages.
+# the pages. The thesis PDFs were left behind in the archived tree when the
+# current site was built, which is why those links 404 today.
 RELOCATED = tuple(tuple(pair) for pair in SITE.get("relocated_assets", []))
 
 
@@ -249,11 +250,10 @@ def author_names(authors: dict | None, key: str) -> list[str]:
 def cite_key_name(full_name: str, known_family: set[str]) -> str:
     """Family name for a BibTeX key.
 
-    researchmap stores author names inconsistently -- "Jane Researcher",
-    "Researcher Jane" and "J. Researcher" all occur within one record set --
-    so a positional rule alone is wrong for some entries. Prefer a token
-    matching a known family name, else fall back to the "First Last"
-    convention.
+    ResearchMap stores author names inconsistently -- "Kazumasa Fujiwara",
+    "Fujiwara Kazumasa" and "K. Fujiwara" all occur -- so a positional rule
+    alone is wrong for some records. Prefer a token matching a known family
+    name, else fall back to the "First Last" convention.
     """
     if "," in full_name:
         family = full_name.split(",")[0]
@@ -666,7 +666,7 @@ def build_empty_context(lang: str, data: dict, profile: dict, news: list) -> dic
 
 BUILDERS = {
     "index": build_index_context,
-    # Content-only pages need no data; their template holds the markup.
+    "note_differentiability": build_empty_context,
     "notes": build_empty_context,
     "schedule": build_schedule_context,
     "articles": build_articles_context,

@@ -1,0 +1,146 @@
+{% extends 'base.jinja' %}
+
+{% block head_extra %}
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <style>
+    body { max-width: 800px; margin: 2em auto; background: var(--background-color); color: var(--text-color); }
+    h1, h2, h3 { color: var(--primary-color); }
+    .env-title { font-weight: bold; margin-top: 1.5em; }
+    .env-block { background: #f6f8fa; border-left: 4px solid #007711; padding: 1em; margin: 1em 0; }
+    .proof { background: #f9f9f9; border-left: 4px solid #888; padding: 1em; margin: 1em 0; }
+    .remark { background: #f6f8fa; border-left: 4px solid #888; padding: 1em; margin: 1em 0; }
+    .reference { font-size: 0.95em; color: #555; margin-top: 2em; }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <h1>全微分可能性の補足</h1>
+  <div>藤原和将 (2021年11月10日)</div>
+
+  <section>
+    <p>
+      $D \subset \mathbb{R}^2$ ($D \ni \{0\}$)を開集合とする．
+      $f: D \to \mathbb{R}$が原点に於いて全微分可能であるとは，
+      $f$が２つの定数$A, B$を伴って，
+      \[
+      f(x,y) = Ax + By + o(|(x,y)|)
+      \]
+      を満たす事である．このノートでは，原点に於ける全微分可能性の判定方法に就いて見る．
+    </p>
+    <p>
+      $f$が原点で全微分可能である事を判定する方法として，次がよく用いられる．
+    </p>
+    <div class="env-block">
+      <div class="env-title">命題（Proposition）</div>
+      <div>
+        $f \in C^1(D)$ならば$f$は原点で全微分可能である．特に，
+        \[
+        A = \partial_x f(0,0),\quad B = \partial_y f(0,0)
+        \]
+        である．
+      </div>
+    </div>
+    <p>
+      一方で，$f$の極座標表示が特定の形をしているならば，原点での全微分可能性の判定は容易である．
+    </p>
+    <div class="env-block">
+      <div class="env-title">命題（Proposition）</div>
+      <div>
+        $\varphi: [-\pi,\pi] \to \mathbb{R}$が$\varphi(-\pi)=\varphi(\pi)$を満たすとする．
+        $f : \mathbb{R}^2 \to \mathbb{R}$を
+        \[
+        f(r \cos \theta, r \sin \theta) = r \varphi (\theta)
+        \]
+        で与える．この時，$f$が原点に於いて全微分可能である事と
+        \[
+        f(x,y) = A x + B y
+        \]
+        なる実数$A,B$が存在する事は同値である．
+      </div>
+    </div>
+    <div class="remark">
+      <div class="env-title">補足（Remark）</div>
+      <div>
+        上の命題を言い換えれば，$f$が原点に於いて全微分可能である事と，$\varphi(\theta) = A \cos \theta + B \sin \theta$である事が同値である．また，$f$が原点に於いて全微分可能である事と，$f$のグラフが原点を含む平面となることが同値である．特に，原点で全微分可能であるならば，$f$は$\mathbb{R}^2$上至る所全微分可能である．
+      </div>
+    </div>
+    <div class="proof">
+      <div class="env-title">証明（Proof）</div>
+      <div>
+        $f(x,y) = Ax + By$ならば，全微分可能性の定義より$f$は全微分可能である．$f$が全微分可能であるならば，２つの実数$A,B$が存在して，
+        \[
+        f(r \cos \theta, r \sin \theta) - f(0,0) = ( A \cos \theta + B \sin \theta ) r + o(r)
+        \]
+        である．$f(0,0)=0$なので，
+        \[
+        \varphi(\theta) = \lim_{r \searrow 0} \frac{f(r \cos \theta, r \sin \theta)-f(0,0)}{r} = A \cos \theta + B \sin \theta
+        \]
+        であるから，$o(r)=0$である．従って，$f(x,y)=Ax+By$を得る．
+      </div>
+    </div>
+    <div class="remark">
+      <div class="env-title">補足（Remark）</div>
+      <div>
+        上記命題より，例えば，
+        \[
+        b(x,y) =
+        \begin{cases}
+        \frac{x^3+y^3}{x^2+y^2} & \mathrm{if}\ (x,y) \neq 0, \\
+        0 & \mathrm{if}\ (x,y) = 0
+        \end{cases}
+        \]
+        は原点に於いて連続且つ偏微分可能であるが，全微分不能である．実際
+        \[
+        b(r \cos \theta, r \sin \theta) = r ( \cos^3 \theta + \sin^3 \theta)
+        \]
+        である．$b(x,y)$は一次式ではないので，$b$は原点に於いて全微分不能である．偏導関数が原点で不連続になっている事は，最初の命題の対偶命題から従う．
+      </div>
+    </div>
+    <div class="remark">
+      <div class="env-title">補足（Remark）</div>
+      <div>
+        $F$を$f$の極座標表示とすれば，
+        \[
+        \frac{\partial}{\partial x} f(0,0) = \frac{\partial}{\partial r} F(0,0) = \varphi(0),\quad
+        \frac{\partial}{\partial y} f(0,0) = \frac{\partial}{\partial r} F(0,\pi/2) = \varphi(\pi/2)
+        \]
+        である．
+      </div>
+    </div>
+    <div class="remark">
+      <div class="env-title">補足（Remark）</div>
+      <div>
+        上記命題で$\varphi$が微分可能な場合に於いて，$f$の偏導関数の挙動を見てみよう．$F$を$f$の極座標表示とすれば，$(x,y) \neq (0,0)$に於いて
+        \[
+        \frac{\partial}{\partial x} f(x,y) = \cos \theta \frac{\partial}{\partial r} F(r,\theta) - \frac{\sin \theta}{r} \frac{\partial}{\partial \theta} F(r,\theta) = \varphi(\theta) \cos \theta - \varphi'(\theta) \sin \theta,
+        \]
+        \[
+        \frac{\partial}{\partial y} f(x,y) = \sin \theta \frac{\partial}{\partial r} F(r,\theta) + \frac{\cos \theta}{r} \frac{\partial}{\partial \theta} F(r,\theta) = \varphi(\theta) \sin \theta + \varphi'(\theta) \cos \theta
+        \]
+        である．もし，上記２つの偏導関数が原点に於いて連続であるならば，２つの偏導関数は$\theta$に依存しない．即ち，
+        \[
+        \varphi(\theta) \cos \theta - \varphi'(\theta) \sin \theta = A,\quad
+        \varphi(\theta) \sin \theta + \varphi'(\theta) \cos \theta = B
+        \]
+        なる定数$A,B$が存在する．
+        \[
+        \varphi(\theta) = \cos \theta \{ \varphi(\theta) \cos \theta - \varphi'(\theta) \sin \theta \} + \sin \theta \{ \varphi(\theta) \sin \theta + \varphi'(\theta) \cos \theta \} = A \cos \theta + B \sin \theta
+        \]
+        より，最初の命題と極座標命題の関係が分かる．
+      </div>
+    </div>
+    <div class="reference">
+      <b>参考文献</b><br>
+      鈴木 武, 柴田 良弘, 田中 和永 , 山田 義雄 著,<br>
+      理工系のための微分積分I, 2007/4/1 内田老鶴圃出版 (ISBN: 4753601811)
+    </div>
+  </section>
+{% endblock %}

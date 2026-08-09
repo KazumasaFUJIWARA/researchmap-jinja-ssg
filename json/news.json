@@ -1,16 +1,51 @@
 [
   {
-    "date": "2024-04-01",
+    "date": "2026-04-27",
     "content": {
-      "en": "The site moved to a static build.",
-      "ja": "サイトを静的生成に移行しました。"
+      "ja": "ダークモード管理を一元化し、予定ページのカレンダー構成を更新しました。京都駅前セミナーのカレンダーを追加し、登録不要のカレンダーは登録リンク一覧から非表示にしました。ResearchMap APIを項目別取得に切り替え、論文・講演のデータ取得漏れを解消しました。",
+      "en": "Unified dark mode management, updated the schedule page calendar configuration. Added Kyoto Ekimae Seminar calendar and hid free/busy-only calendars from the registration links. Switched ResearchMap API to per-section fetching to fix missing papers and presentations."
     }
   },
   {
-    "date": "2024-01-15",
+    "date": "2025-05-08",
     "content": {
-      "en": "A new preprint is available.",
-      "ja": "プレプリントを公開しました。"
+      "ja": "ノート・数値シミュレーション・講義補助資料のタブを新設し、SPA型で動的に切り替えられるようになりました。MathJaxによる数式表示も強化されています。",
+      "en": "New tabs for Notes, Numerical Simulations, and Supplementary Lecture Materials have been added. The site now uses a SPA-style dynamic tab system with improved MathJax rendering for mathematical expressions."
+    }
+  },
+  {
+    "date": "2025-05-05",
+    "content": {
+      "ja": "HPを更新しました。ResearchMapとの部分的な連携機能を追加しました",
+      "en": "Updated the HP. Added a partial integration with ResearchMap."
+    }
+  },
+  {
+    "date": "2025-05-06 19:02",
+    "content": {
+      "ja": "教務経歴が修正されました",
+      "en": "Teaching experience has been updated"
+    }
+  },
+  {
+    "date": "2025-05-07 15:25",
+    "content": {
+      "ja": "論文情報が修正されました",
+      "en": "Published papers have been updated"
+    }
+  },
+  {
+    "date": "2025-05-25 20:47",
+    "content": {
+      "ja": "論文情報が更新されました",
+      "en": "Published papers have been updated"
+    }
+  },
+  {
+    "date": "2025-06-05 16:17",
+    "content": {
+      "ja": "論文情報を修正しました",
+      "en": "Published papers have been modified"
     }
   }
 ]
