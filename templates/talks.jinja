@@ -1,0 +1,38 @@
+{% extends 'base.jinja' %}
+
+{% block nav_sub %}
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-tab-type="international">{{ t.international }}</button>
+                    <button class="conference-tab" data-tab-type="domestic">{{ t.domestic }}</button>
+                </div>
+            </div>
+{% endblock %}
+
+{% macro talk_card(talk) %}
+                <div class="talk-card">
+                    <div class="talk-title">{{ talk.title }} {% if talk.is_poster %}<span class="poster-badge">{{ t.poster }}</span>{% endif %}</div>
+                    <div class="talk-authors">{{ talk.authors }}</div>
+                    <div class="talk-meta">
+                        {{ talk.venue_line }} ({{ talk.date }})
+                        {%- if talk.slide_url %}<br><a href="{{ talk.slide_url }}" class="talk-link" target="_blank">{{ t.view_slides }}</a>{% endif %}
+                    </div>
+                </div>
+{%- endmacro %}
+
+{% block content %}
+        <div id="international-section" class="conference-section active">
+            <div id="international-talks" class="talks-grid">
+                {%- for talk in international %}{{ talk_card(talk) }}{% else %}<p>{{ t.no_talks }}</p>{% endfor %}
+            </div>
+        </div>
+        <div id="domestic-section" class="conference-section">
+            <div id="domestic-talks" class="talks-grid">
+                {%- for talk in domestic %}{{ talk_card(talk) }}{% else %}<p>{{ t.no_talks }}</p>{% endfor %}
+            </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ base }}js/tabs.js"></script>
+{% endblock %}

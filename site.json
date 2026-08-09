@@ -1,0 +1,304 @@
+{
+  "languages": [
+    "en",
+    "ja"
+  ],
+  "ja_only_pages": [
+    "lectures.html",
+    "schedule.html"
+  ],
+  "footer_name": {
+    "en": "Jane Q. Researcher",
+    "ja": "研究 花子"
+  },
+  "to_top_label": {
+    "en": "To Top",
+    "ja": "ページトップへ"
+  },
+  "theme_label_light": {
+    "en": "Dark Mode 🌙",
+    "ja": "ダークモード 🌙"
+  },
+  "lang_switch_label": {
+    "en": "日本語",
+    "ja": "English"
+  },
+  "supervisor_label": {
+    "en": "Professor",
+    "ja": "指導教員"
+  },
+  "nav": {
+    "en": [
+      {
+        "href": "index.html",
+        "label": "Home",
+        "key": "home"
+      },
+      {
+        "href": "cv.html",
+        "label": "CV",
+        "key": "cv"
+      },
+      {
+        "href": "articles.html",
+        "label": "Articles",
+        "key": "articles"
+      },
+      {
+        "href": "talks.html",
+        "label": "Talks",
+        "key": "talks"
+      },
+      {
+        "href": "links.html",
+        "label": "Links",
+        "key": "links"
+      }
+    ],
+    "ja": [
+      {
+        "href": "index.html",
+        "label": "ホーム",
+        "key": "home"
+      },
+      {
+        "href": "cv.html",
+        "label": "履歴書",
+        "key": "cv"
+      },
+      {
+        "href": "articles.html",
+        "label": "論文",
+        "key": "articles"
+      },
+      {
+        "href": "talks.html",
+        "label": "講演",
+        "key": "talks"
+      },
+      {
+        "href": "lectures.html",
+        "label": "講義",
+        "key": "lectures"
+      },
+      {
+        "href": "schedule.html",
+        "label": "予定",
+        "key": "schedule"
+      },
+      {
+        "href": "links.html",
+        "label": "リンク",
+        "key": "links"
+      }
+    ]
+  },
+  "strings": {
+    "en": {
+      "tab_home": "Home",
+      "tab_contact": "Contact",
+      "tab_external": "External ID",
+      "current_position": "Current Position",
+      "research_interests": "Research Interests",
+      "news": "News",
+      "office": "Office",
+      "address": "Address",
+      "contact": "Contact",
+      "form_missing": "(Form URL not configured)",
+      "international": "International Conferences",
+      "domestic": "Domestic Conferences",
+      "poster": "Poster Presentation",
+      "view_slides": "View Slides",
+      "no_talks": "No talks found in this category.",
+      "researcher_links": "Researcher Links",
+      "institution_links": "Institution Links",
+      "journal_articles": "Journal Articles",
+      "proceedings": "Proceedings",
+      "theses": "Theses",
+      "show_abstract": "Show abstract",
+      "copy_label": "Copy",
+      "no_journal": "No journal articles found.",
+      "no_proceedings": "No proceedings found.",
+      "cv_basic": "Basic",
+      "cv_academic": "Academic Information",
+      "cv_professional": "Professional Position",
+      "cv_grant": "Grants",
+      "cv_organization": "Organization",
+      "cv_research_areas": "Research Areas",
+      "cv_research_interests": "Research Interests",
+      "cv_membership": "Membership",
+      "cv_degree": "Academic Degree",
+      "cv_supervisor": "Professor",
+      "cv_collaborator": "Co-investigator",
+      "cv_other": "Others",
+      "cv_regional_support": "Regional Support"
+    },
+    "ja": {
+      "tab_home": "ホーム",
+      "tab_contact": "連絡先",
+      "tab_external": "外部ID",
+      "current_position": "現在の所属",
+      "research_interests": "研究分野",
+      "news": "お知らせ",
+      "office": "研究室",
+      "address": "住所",
+      "contact": "連絡",
+      "form_missing": "（フォーム URL 未設定）",
+      "international": "国際会議",
+      "domestic": "国内会議",
+      "poster": "ポスター発表",
+      "view_slides": "スライドを見る",
+      "no_talks": "この分類の講演情報が見つかりませんでした。",
+      "researcher_links": "研究者情報",
+      "institution_links": "研究機関",
+      "journal_articles": "論文",
+      "proceedings": "国際会議",
+      "theses": "学位論文",
+      "show_abstract": "概要を表示",
+      "copy_label": "コピー",
+      "no_journal": "査読付き論文が見つかりませんでした。",
+      "no_proceedings": "国際会議論文が見つかりませんでした。",
+      "cv_basic": "基本情報",
+      "cv_academic": "学歴",
+      "cv_professional": "職歴",
+      "cv_grant": "競争的資金",
+      "cv_organization": "運営協力",
+      "cv_research_areas": "研究分野",
+      "cv_research_interests": "研究テーマ",
+      "cv_membership": "学会",
+      "cv_degree": "学位",
+      "cv_supervisor": "指導教員",
+      "cv_collaborator": "分担協力者",
+      "cv_other": "その他",
+      "cv_regional_support": "地域支援"
+    }
+  },
+  "pages": {
+    "index": {
+      "template": "index.jinja",
+      "filename": "index.html",
+      "nav_key": "home",
+      "en": {
+        "title": "Homepage of Jane Researcher",
+        "description": "Homepage of Jane Researcher",
+        "keywords": "Jane Researcher, mathematics",
+        "og_description": "Homepage of Jane Researcher, with CV and publication list."
+      },
+      "ja": {
+        "title": "研究花子 - 例大学",
+        "description": "研究花子のホームページ",
+        "keywords": "研究花子, 数学, 例大学",
+        "og_description": "研究花子のホームページです。"
+      }
+    },
+    "talks": {
+      "template": "talks.jinja",
+      "filename": "talks.html",
+      "nav_key": "talks",
+      "en": {
+        "title": "Jane Researcher - Talks",
+        "description": "Talks by Jane Researcher",
+        "keywords": "Jane Researcher, talks",
+        "og_description": "Conference presentations and seminars."
+      },
+      "ja": {
+        "title": "講演 - 研究花子",
+        "description": "研究花子の講演リスト",
+        "keywords": "研究花子, 講演, 学会発表",
+        "og_description": null
+      }
+    },
+    "articles": {
+      "template": "articles.jinja",
+      "filename": "articles.html",
+      "nav_key": "articles",
+      "en": {
+        "title": "Articles - Jane Researcher",
+        "description": "Publications by Jane Researcher",
+        "keywords": "Jane Researcher, publications, papers",
+        "og_description": "Research papers and conference proceedings."
+      },
+      "ja": {
+        "title": "論文 - 研究花子",
+        "description": "研究花子の論文リスト",
+        "keywords": "研究花子, 論文, 研究業績",
+        "og_description": null
+      }
+    },
+    "cv": {
+      "template": "cv.jinja",
+      "filename": "cv.html",
+      "nav_key": "cv",
+      "en": {
+        "title": "Jane Researcher - Curriculum Vitae",
+        "description": "Curriculum vitae of Jane Researcher",
+        "keywords": "Jane Researcher, curriculum vitae",
+        "og_description": "Academic career and research activities."
+      },
+      "ja": {
+        "title": "履歴書 - 研究花子",
+        "description": "研究花子の履歴書",
+        "keywords": "研究花子, 履歴書",
+        "og_description": "研究花子の履歴書"
+      }
+    },
+    "lectures": {
+      "template": "lectures.jinja",
+      "filename": "lectures.html",
+      "nav_key": "lectures",
+      "rule": false,
+      "ja": {
+        "title": "講義 - 研究花子",
+        "description": "研究花子の講義情報",
+        "keywords": "研究花子, 講義, 授業",
+        "og_description": null
+      }
+    },
+    "schedule": {
+      "template": "schedule.jinja",
+      "filename": "schedule.html",
+      "nav_key": "schedule",
+      "rule": false,
+      "ja": {
+        "title": "予定 - 研究花子",
+        "description": "研究花子の予定",
+        "keywords": "研究花子, 予定",
+        "og_description": null
+      }
+    },
+    "links": {
+      "template": "links.jinja",
+      "filename": "links.html",
+      "nav_key": "links",
+      "en": {
+        "title": "Links - Jane Researcher",
+        "description": "Links from Jane Researcher",
+        "keywords": "Jane Researcher, links",
+        "og_description": "Links from Jane Researcher"
+      },
+      "ja": {
+        "title": "リンク - 研究花子",
+        "description": "研究花子のリンク",
+        "keywords": "研究花子, リンク",
+        "og_description": "研究花子のリンク"
+      }
+    }
+  },
+  "theses": [],
+  "verbatim_assets": [
+    "styles.css",
+    "dark.css"
+  ],
+  "minimum_items": [
+    [
+      "articles.html",
+      "paper-item",
+      2
+    ],
+    [
+      "talks.html",
+      "talk-card",
+      2
+    ]
+  ]
+}

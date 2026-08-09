@@ -1,0 +1,125 @@
+{
+  "researchmap": {
+    "id": "SampleResearcher",
+    "api": "https://api.researchmap.jp/SampleResearcher",
+    "url": {
+      "en": "https://researchmap.jp/SampleResearcher",
+      "ja": "https://researchmap.jp/SampleResearcher"
+    }
+  },
+  "personal_info": {
+    "sex": {
+      "en": "Female",
+      "ja": "女性"
+    }
+  },
+  "address": {
+    "office": {
+      "en": "Room 101, Building A",
+      "ja": "A棟 101研究室"
+    },
+    "location": {
+      "en": "1-1 Example, Example City",
+      "ja": "例県例市例町1-1"
+    },
+    "postal_code": "000-0000",
+    "phone": "000-000-0000"
+  },
+  "contact": {
+    "google_form": {
+      "url": "https://example.org/contact-form",
+      "label": {
+        "en": "Contact form",
+        "ja": "お問い合わせフォーム"
+      },
+      "note": {
+        "en": "Email is not published.",
+        "ja": "メールアドレスは非公開です。"
+      }
+    }
+  },
+  "degrees": [
+    {
+      "type": "doctor",
+      "date": "2017-03-15",
+      "supervisor": {
+        "en": "Professor Example",
+        "ja": "例 教授"
+      }
+    },
+    {
+      "type": "master",
+      "date": "2014-03-15",
+      "supervisor": {
+        "en": "Professor Example",
+        "ja": "例 教授"
+      }
+    }
+  ],
+  "organization": [
+    {
+      "label": {
+        "en": "Seminar organiser",
+        "ja": "セミナー世話人"
+      },
+      "date": {
+        "en": "From April 2022",
+        "ja": "2022年4月--"
+      },
+      "place": {
+        "en": "Example University",
+        "ja": "例大学"
+      }
+    }
+  ],
+  "job": [],
+  "grants": [],
+  "awards": [],
+  "office_hours": [
+    {
+      "day": "Wednesday",
+      "time": "13:00-15:00"
+    }
+  ],
+  "google_calendar": [
+    {
+      "id": "sample@group.calendar.google.com",
+      "name": "Lectures",
+      "color": "#005500"
+    }
+  ],
+  "warning": {
+    "en": "Repositories below are provided as-is.",
+    "ja": "以下のリポジトリは無保証です。"
+  },
+  "researcher_links": [
+    {
+      "label": {
+        "en": "ORCID",
+        "ja": "ORCID"
+      },
+      "url": "https://orcid.org/0000-0000-0000-0000"
+    }
+  ],
+  "institution_links": [
+    {
+      "label": {
+        "en": "Example University",
+        "ja": "例大学"
+      },
+      "url": "https://example.org/"
+    }
+  ],
+  "github": [
+    {
+      "title": "Sample",
+      "repository": [
+        {
+          "title": "sample-repo",
+          "url": "https://github.com/example/sample-repo",
+          "description": "A sample repository."
+        }
+      ]
+    }
+  ]
+}

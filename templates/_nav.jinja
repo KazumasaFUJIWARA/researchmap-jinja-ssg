@@ -1,0 +1,5 @@
+            <div class="nav-main" id="main-nav">
+{%- for n in nav %}
+                <a href="{{ nav_base }}{{ n.href }}" class="nav-link{% if n.key == page.nav_key %} current{% endif %}">{{ n.label }}</a>
+{%- endfor %}
+            </div>

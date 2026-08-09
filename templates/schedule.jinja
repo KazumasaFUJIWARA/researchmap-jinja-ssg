@@ -1,0 +1,34 @@
+{% extends 'base.jinja' %}
+
+{% block nav_sub %}
+            <div class="nav-sub">
+                <div class="conference-tabs" id="schedule-tabs">
+                    <button class="conference-tab active" data-tab="calendar">カレンダー</button>
+                    <button class="conference-tab" data-tab="links">カレンダー登録リンク</button>
+                </div>
+            </div>
+{% endblock %}
+
+{% block content %}
+        <div id="calendar-tab" class="tab-section active">
+            <div id="calendar-iframe"><iframe src="{{ calendar_src }}" style="border:0" frameborder="0" scrolling="no"></iframe></div>
+        </div>
+        <div id="links-tab" class="tab-section">
+            <div id="calendar-links">
+                {%- for cal in calendars %}
+                <div class="card calendar-card">
+                    <div style="font-weight:bold; margin-bottom:0.5em;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:{{ cal.color }};margin-right:6px;vertical-align:middle;"></span>{{ cal.name }}</div>
+                    <div class="link-container">
+                        {%- if not cal.link %}<button class="copy-button" data-copy="{{ cal.url }}">コピー</button><span class="link-text">{{ cal.url }}</span>{% endif %}
+                    </div>
+                    {%- if cal.note %}<div style="font-size:0.95em; color:#666; margin-top:0.5em;">{{ cal.note }}</div>{% endif %}
+                    {%- if cal.link %}<div style="font-size:0.95em; color:#666; margin-top:0.5em;">出典：<a href="{{ cal.link }}" target="_blank" rel="noopener">{{ cal.link }}</a></div>{% endif %}
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ base }}js/schedule-tabs.js"></script>
+{% endblock %}

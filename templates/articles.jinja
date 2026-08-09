@@ -1,0 +1,89 @@
+{% extends 'base.jinja' %}
+
+{% block nav_sub %}
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-article-type="journal">{{ t.journal_articles }}</button>
+                    <button class="conference-tab" data-article-type="proceedings">{{ t.proceedings }}</button>
+                    <button class="conference-tab" data-article-type="thesis">{{ t.theses }}</button>
+                </div>
+            </div>
+{% endblock %}
+
+{% macro paper_item(paper) %}
+                    <li class="paper-item">
+                        <div class="paper-title">{{ paper.title }}</div>
+                        <div class="paper-authors">{{ paper.authors }}</div>
+                        {%- if paper.abstract %}
+                        <details class="paper-abstract">
+                            <summary>{{ t.show_abstract }}</summary>
+                            <p>{{ paper.abstract }}</p>
+                        </details>
+                        {%- endif %}
+                        <div class="paper-info">
+                            <div class="paper-journal">{{ paper.citation }}</div>
+                            <div class="paper-links">
+                                {%- if paper.doi %}<a href="https://doi.org/{{ paper.doi }}" target="_blank" class="doi-link">DOI: {{ paper.doi }}</a>{% endif %}
+                                <div class="paper-actions">
+                                    <button class="bibtex-button" data-bibtex="{{ paper.bibtex }}">BibTeX</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+{%- endmacro %}
+
+{% block content %}
+        <div id="journal-section" class="article-section active">
+            <div id="journal-papers">
+                {%- if journal_papers %}
+                <ul>
+                {%- for paper in journal_papers %}{{ paper_item(paper) }}{% endfor %}
+                </ul>
+                {%- else %}<p>{{ t.no_journal }}</p>
+                {%- endif %}
+            </div>
+        </div>
+        <div id="proceedings-section" class="article-section">
+            <div id="proceedings">
+                {%- if proceedings_papers %}
+                <ul>
+                {%- for paper in proceedings_papers %}{{ paper_item(paper) }}{% endfor %}
+                </ul>
+                {%- else %}<p>{{ t.no_proceedings }}</p>
+                {%- endif %}
+            </div>
+        </div>
+        <div id="thesis-section" class="article-section">
+            <div class="thesis-list">
+                {%- for thesis in theses %}
+                <div class="paper-item">
+                    <div class="paper-title">{{ thesis.title }}</div>
+                    <div class="paper-authors">{{ thesis.authors }}</div>
+                    <div class="paper-info">
+                        {{ thesis.label }}, <a href="{{ thesis.pdf }}">[pdf]</a>
+                        <div class="paper-actions">
+                            <button class="bibtex-button" data-bibtex="{{ thesis.bibtex }}">BibTeX</button>
+                        </div>
+                    </div>
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+{% endblock %}
+
+{% block after_content %}
+    <div class="overlay" id="overlay"></div>
+    <div class="bibtex-popup" id="bibtex-popup">
+        <div class="bibtex-popup-header">
+            <div class="bibtex-popup-title">BibTeX</div>
+            <button class="copy-button">{{ t.copy_label }}</button>
+        </div>
+        <pre id="bibtex-content"></pre>
+        <button class="bibtex-popup-close">&times;</button>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ base }}js/tabs.js"></script>
+    <script src="{{ base }}js/bibtex.js"></script>
+{% endblock %}

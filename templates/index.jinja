@@ -1,0 +1,101 @@
+{% extends 'base.jinja' %}
+
+{% block nav_sub %}
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-tab-type="home">{{ t.tab_home }}</button>
+                    <button class="conference-tab" data-tab-type="contact">{{ t.tab_contact }}</button>
+                    <button class="conference-tab" data-tab-type="external">{{ t.tab_external }}</button>
+                </div>
+            </div>
+{% endblock %}
+
+{% block content %}
+        <div id="home-section" class="tab-section active">
+            <section class="current-position">
+                <h2>{{ t.current_position }}</h2>
+                <div id="current-position">{{ affiliation.job }}<br>@ {{ affiliation.section }}<br>{{ affiliation.affiliation }}</div>
+            </section>
+
+            <section class="research-interests">
+                <h2>{{ t.research_interests }}</h2>
+                <div id="research-interests">
+                    {%- if profile_text %}<div class="profile-text">{{ profile_text|safe }}</div>
+                    {%- else %}
+                    {%- for keyword in interest_keywords %}<div class="interest-card">{{ keyword }}</div>{% endfor %}
+                    {%- endif %}
+                </div>
+            </section>
+
+            <section class="news">
+                <h2>{{ t.news }}</h2>
+                <div id="news">
+                    {%- for item in news %}
+                    <div class="card news-card">
+                        <div class="news-date">{{ item.date }}</div>
+                        <div class="news-content">{{ item.content|safe }}</div>
+                    </div>
+                    {%- else %}<p>ニュースはありません。</p>
+                    {%- endfor %}
+                </div>
+            </section>
+        </div>
+
+        <div id="contact-section" class="tab-section">
+            <section class="contact">
+                <div class="section">
+                    <table class="record" id="contact-info">
+                        <tr valign="top">
+                            <td class="contact">{{ t.office }}</td>
+                            <td>{{ contact.office }}</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="contact">{{ t.address }}</td>
+                            <td>{{ contact.location }}<br>{{ contact.postal_code }}</td>
+                        </tr>
+                        {%- if contact.phone %}
+                        <tr valign="top">
+                            <td class="contact">電話</td>
+                            <td>{{ contact.phone }}</td>
+                        </tr>
+                        {%- endif %}
+                        {%- if contact.form %}
+                        <tr valign="top">
+                            <td class="contact">{{ t.contact }}</td>
+                            <td class="contact-value">
+                                {%- if contact.form.url %}<a href="{{ contact.form.url }}" target="_blank" rel="noopener noreferrer">{{ contact.form.label }}</a>
+                                {%- else %}<span class="contact-pending">{{ t.form_missing }}</span>
+                                {%- endif %}
+                                {%- if contact.form.note %}<br><span class="contact-note">{{ contact.form.note }}</span>{% endif %}
+                            </td>
+                        </tr>
+                        {%- endif %}
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="external-section" class="tab-section">
+            <section class="external-ids">
+                <div id="external-ids">
+                    {%- if external_ids %}
+                    <div class="card external-id-card">
+                        <div class="external-id-label">researchmap</div>
+                        <div class="external-id-link"><a href="{{ researchmap_url }}" target="_blank">{{ researchmap_url }}</a></div>
+                    </div>
+                    {%- for item in external_ids %}
+                    <div class="card external-id-card">
+                        <div class="external-id-label">{{ item.label }}</div>
+                        <div class="external-id-link"><a href="{{ item.url }}" target="_blank">{{ item.url }}</a></div>
+                    </div>
+                    {%- endfor %}
+                    {%- else %}<p>No external IDs found.</p>
+                    {%- endif %}
+                </div>
+            </section>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ base }}js/tabs.js"></script>
+{% endblock %}

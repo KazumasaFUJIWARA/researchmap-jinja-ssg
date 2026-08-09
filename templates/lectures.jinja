@@ -1,0 +1,60 @@
+{% extends 'base.jinja' %}
+
+{% block nav_sub %}
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-lecture-type="ongoing">現在</button>
+                    <button class="conference-tab" data-lecture-type="past">過去の講義</button>
+                </div>
+            </div>
+{% endblock %}
+
+{% macro lecture_card(group) %}
+                <div class="talk-card">
+                    <div class="talk-title">{{ group.subject }}</div>
+                    <div class="talk-meta">
+                        {%- for entry in group.entries %}{% if not loop.first %}<br>{% endif %}{{ entry.text }}
+                        {%- if entry.syllabus %}<div class="syllabus"><a href="{{ entry.syllabus }}" class="syllabus-button" target="_blank" rel="noopener noreferrer">シラバス</a></div>{% endif %}
+                        {%- endfor %}
+                    </div>
+                </div>
+{%- endmacro %}
+
+{% block content %}
+        <div id="ongoing-section" class="tab-section active">
+            <h2>オフィスアワー</h2>
+            <div id="office-hours">
+                {%- if office_hours %}
+                {%- for line in office_hours %}{{ line }}{% if not loop.last %}<br>{% endif %}{% endfor %}
+                <br>
+                {{ appointment_note|safe }}
+                <br>
+                <br>
+                {%- else %}<p>オフィスアワーは設定されていません。</p>
+                {%- endif %}
+            </div>
+            <h2>現在の主な講義</h2>
+            <div id="ongoing-lectures" class="talks-grid">
+                {%- for group in ongoing %}{{ lecture_card(group) }}{% else %}<p>該当する講義はありません。</p>{% endfor %}
+            </div>
+        </div>
+        <div id="past-section" class="tab-section">
+            <h2>過去の講義</h2>
+            <p class="lecture-past-note">年度（4月始まり）ごとに整理しています。</p>
+            <div id="past-lectures">
+                {%- for year in past_years %}
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">{{ year.label }}</h3>
+                    <div class="talks-grid lecture-year-grid">
+                        {%- for group in year.groups %}{{ lecture_card(group) }}{% endfor %}
+                    </div>
+                </section>
+                {%- else %}<p>該当する講義はありません。</p>
+                {%- endfor %}
+            </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ base }}js/tabs.js"></script>
+{% endblock %}

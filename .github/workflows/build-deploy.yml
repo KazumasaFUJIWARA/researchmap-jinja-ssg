@@ -1,0 +1,59 @@
+name: build and deploy
+
+# Builds the site and, for main only, publishes dist/ to the orphan `deploy`
+# branch that the public server pulls. A push to develop builds and verifies
+# without touching deploy.
+on:
+  push:
+    branches: [main, develop]
+  # The ongoing/past lecture split is decided at build time, so the site is
+  # rebuilt monthly even when nothing changes.
+  schedule:
+    - cron: '0 20 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install -r requirements-build.txt
+
+      - name: Build
+        run: python scripts/build.py
+
+      - name: Verify output
+        run: python scripts/verify.py dist
+
+      - name: Publish to deploy branch
+        if: github.ref == 'refs/heads/main' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # The deploy branch holds only build output, with no shared history,
+          # so each publish replaces it wholesale.
+          rm -rf .deploy && mkdir .deploy
+          cp -a dist/. .deploy/
+          cd .deploy
+          git init -q -b deploy
+          git add -A
+          git commit -q -m "Build site from ${SOURCE_SHA}"
+          git push -q --force \
+            "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" \
+            deploy

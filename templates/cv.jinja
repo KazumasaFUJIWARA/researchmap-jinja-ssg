@@ -1,0 +1,131 @@
+{% extends 'base.jinja' %}
+
+{% block nav_sub %}
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-tab-type="basic">{{ t.cv_basic }}</button>
+                    <button class="conference-tab" data-tab-type="academic">{{ t.cv_academic }}</button>
+                    <button class="conference-tab" data-tab-type="professional">{{ t.cv_professional }}</button>
+                    {%- if has_grants %}<button class="conference-tab" data-tab-type="grant">{{ t.cv_grant }}</button>{% endif %}
+                    <button class="conference-tab" data-tab-type="organization">{{ t.cv_organization }}</button>
+                </div>
+            </div>
+{% endblock %}
+
+{% macro grant_card(item) %}
+                <div class="card">
+                    <div class="cv-card-title">{{ item.title }}</div>
+                    <div class="cv-card-info">
+                        {{ item.system }}
+                        {%- if item.institution %}<br>{{ item.institution_label }}: {{ item.institution }}{% endif %}
+                        {%- if item.see_also %}<br>{{ item.see_also.label }} <a href="{{ item.see_also.url }}">{{ item.see_also.url }}</a>{% endif %}
+                        {%- if item.note %}<br>📝{{ item.note|safe }}{% endif %}
+                    </div>
+                    <div class="cv-card-date">{{ item.dates }}</div>
+                </div>
+{%- endmacro %}
+
+{% block content %}
+        <div id="basic-section" class="tab-section active">
+            <div class="card">
+                <table class="record" id="personal-info">
+                    {%- for row in personal_info %}
+                    <tr>
+                        <td class="record-title">{{ row.label }}</td>
+                        <td class="record">{{ row.value }}</td>
+                    </tr>
+                    {%- endfor %}
+                </table>
+            </div>
+        </div>
+        <div id="academic-section" class="tab-section">
+            <h2>{{ t.cv_research_areas }}</h2>
+            <div id="research-areas">
+                {%- for area in research_areas %}
+                <div class="card">
+                    <strong>{{ area.discipline }}</strong> - {{ area.field }}<br>{{ area.keyword }}
+                </div>
+                {%- endfor %}
+            </div>
+            <h2>{{ t.cv_research_interests }}</h2>
+            <div class="interests-container" id="research-interests">
+                {%- for keyword in research_interests %}
+                <div class="interest-card">{{ keyword }}</div>
+                {%- endfor %}
+            </div>
+            <h2>{{ t.cv_membership }}</h2>
+            <div id="membership">
+                {%- for name in memberships %}
+                <div class="card">{{ name }}</div>
+                {%- endfor %}
+            </div>
+            <h2>{{ t.cv_degree }}</h2>
+            <div id="academic-degrees">
+                {%- for degree in degrees %}
+                <div class="card">
+                    <div class="cv-card-title">{{ degree.name }}</div>
+                    <div class="cv-card-info">{{ degree.institution }}</div>
+                    {%- if degree.supervisor %}<div class="cv-card-info">{{ t.cv_supervisor }}: {{ degree.supervisor }}</div>{% endif %}
+                    <div class="cv-card-date">{{ degree.date }}</div>
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+        <div id="professional-section" class="tab-section">
+            <div id="professional-positions">
+                {%- for job in positions %}
+                <div class="card">
+                    <div class="cv-card-title">{{ job.title }}</div>
+                    <div class="cv-card-info">
+                        {{ job.affiliation }}
+                        {{ job.section }}
+                        {%- if job.note %}📝{{ job.note|safe }}{% endif %}
+                    </div>
+                    <div class="cv-card-date">{{ job.dates }}</div>
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+        {%- if has_grants %}
+        <div id="grant-section" class="tab-section">
+            <div class="interests-container" id="grants">
+                {%- for item in grants_principal %}{{ grant_card(item) }}{% endfor %}
+            </div>
+            <h2>{{ t.cv_collaborator }}</h2>
+            <div class="interests-container" id="grants-collaborator">
+                {%- for item in grants_collaborator %}{{ grant_card(item) }}{% endfor %}
+            </div>
+            <h2>{{ t.cv_other }}</h2>
+            <div class="interests-container" id="grants-other">
+                {%- for item in grants_other %}{{ grant_card(item) }}{% endfor %}
+            </div>
+        </div>
+        {%- endif %}
+        <div id="organization-section" class="tab-section">
+            <div id="organization">
+                {%- for item in organization %}
+                <div class="card">
+                    <div class="cv-card-title">{{ item.label }}</div>
+                    <div class="cv-card-date">{{ item.date }}</div>
+                    {%- if item.place %}<div class="cv-card-info">{{ item.place }}</div>{% endif %}
+                </div>
+                {%- endfor %}
+            </div>
+            {%- if has_regional_support %}
+            <h2>{{ t.cv_regional_support }}</h2>
+            <div id="regional-support">
+                {%- for item in regional_support %}
+                <div class="card">
+                    <div class="cv-card-title">{{ item.title }}</div>
+                    <div class="cv-card-info">{{ item.event }} {{ item.promoter }}</div>
+                    <div class="cv-card-date">{{ item.dates }}</div>
+                </div>
+                {%- endfor %}
+            </div>
+            {%- endif %}
+        </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ base }}js/tabs.js"></script>
+{% endblock %}

@@ -1,0 +1,464 @@
+{
+  "family_name": {
+    "ja": "研究",
+    "ja-Kana": "ケンキュウ",
+    "en": "Researcher"
+  },
+  "given_name": {
+    "ja": "花子",
+    "ja-Kana": "ハナコ",
+    "en": "Jane"
+  },
+  "profile": {
+    "en": "Sample profile text. HTML is allowed here.",
+    "ja": "プロフィール本文のサンプルです。HTML タグを使えます。"
+  },
+  "affiliations": [
+    {
+      "job": {
+        "en": "Associate Professor",
+        "ja": "准教授"
+      },
+      "section": {
+        "en": "Department of Mathematics",
+        "ja": "数学科"
+      },
+      "affiliation": {
+        "en": "Example University",
+        "ja": "例大学"
+      }
+    }
+  ],
+  "degrees": [
+    {
+      "degree": {
+        "en": "Doctor of Science",
+        "ja": "博士（理学）"
+      },
+      "degree_institution": {
+        "en": "Example University",
+        "ja": "例大学"
+      },
+      "degree_date": "2017-03"
+    },
+    {
+      "degree": {
+        "en": "Master of Science",
+        "ja": "修士（理学）"
+      },
+      "degree_institution": {
+        "en": "Example University",
+        "ja": "例大学"
+      },
+      "degree_date": "2014-03"
+    }
+  ],
+  "see_also": [
+    {
+      "@id": "https://orcid.org/0000-0000-0000-0000",
+      "label": "orcid"
+    },
+    {
+      "@id": "https://example.org/",
+      "label": "url"
+    }
+  ],
+  "@graph": [
+    {
+      "@type": "research_interests",
+      "items": [
+        {
+          "keyword": {
+            "en": "Partial differential equations",
+            "ja": "偏微分方程式"
+          }
+        },
+        {
+          "keyword": {
+            "en": "Harmonic analysis",
+            "ja": "調和解析"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "research_areas",
+      "items": [
+        {
+          "discipline": {
+            "en": "Mathematics",
+            "ja": "数学"
+          },
+          "research_field": {
+            "en": "Analysis",
+            "ja": "解析学"
+          },
+          "research_keyword": {
+            "en": "PDE",
+            "ja": "偏微分方程式"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "association_memberships",
+      "items": [
+        {
+          "academic_society_name": {
+            "en": "Example Mathematical Society",
+            "ja": "例数学会"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "education",
+      "items": [
+        {
+          "course": {
+            "en": "Doctoral course",
+            "ja": "博士課程"
+          },
+          "affiliation": {
+            "en": "Example University",
+            "ja": "例大学"
+          },
+          "department": {
+            "en": "Department of Mathematics",
+            "ja": "数学科"
+          },
+          "from_date": "2014-04",
+          "to_date": "2017-03"
+        }
+      ]
+    },
+    {
+      "@type": "awards",
+      "items": [
+        {
+          "rm:id": "1",
+          "award_name": {
+            "en": "Young Researcher Award",
+            "ja": "若手研究者賞"
+          },
+          "association": {
+            "en": "Example Mathematical Society",
+            "ja": "例数学会"
+          },
+          "award_title": {
+            "en": "For work on dispersive equations",
+            "ja": "分散型方程式の研究に対して"
+          },
+          "award_date": "2019-09"
+        }
+      ]
+    },
+    {
+      "@type": "research_experience",
+      "items": [
+        {
+          "rm:id": "10",
+          "job": {
+            "en": "Associate Professor",
+            "ja": "准教授"
+          },
+          "affiliation": {
+            "en": "Example University",
+            "ja": "例大学"
+          },
+          "section": {
+            "en": "Department of Mathematics",
+            "ja": "数学科"
+          },
+          "from_date": "2021-04",
+          "to_date": "9999"
+        },
+        {
+          "rm:id": "11",
+          "job": {
+            "en": "Assistant Professor",
+            "ja": "助教"
+          },
+          "affiliation": {
+            "en": "Another University",
+            "ja": "別大学"
+          },
+          "section": {
+            "en": "Faculty of Science",
+            "ja": "理学部"
+          },
+          "from_date": "2018-04",
+          "to_date": "2021-03"
+        }
+      ]
+    },
+    {
+      "@type": "published_papers",
+      "items": [
+        {
+          "rm:id": "100",
+          "paper_title": {
+            "en": "A sample paper on dispersive equations",
+            "ja": "分散型方程式に関するサンプル論文"
+          },
+          "authors": {
+            "en": [
+              {
+                "name": "Jane Researcher"
+              },
+              {
+                "name": "John Coauthor"
+              }
+            ],
+            "ja": [
+              {
+                "name": "研究 花子"
+              },
+              {
+                "name": "共著 太郎"
+              }
+            ]
+          },
+          "publication_name": {
+            "en": "Journal of Sample Mathematics",
+            "ja": "サンプル数学雑誌"
+          },
+          "publication_date": "2022-05-01",
+          "volume": "12",
+          "number": "3",
+          "starting_page": "1",
+          "ending_page": "20",
+          "identifiers": {
+            "doi": [
+              "10.0000/sample.2022.001"
+            ]
+          },
+          "description": {
+            "en": "We prove a sample result. This text comes from the ResearchMap description field."
+          },
+          "published_paper_type": "scientific_journal"
+        },
+        {
+          "rm:id": "101",
+          "paper_title": {
+            "en": "Another sample paper",
+            "ja": "もう一つのサンプル論文"
+          },
+          "authors": {
+            "en": [
+              {
+                "name": "Jane Researcher"
+              }
+            ],
+            "ja": [
+              {
+                "name": "研究 花子"
+              }
+            ]
+          },
+          "publication_name": {
+            "en": "Journal of Sample Mathematics",
+            "ja": "サンプル数学雑誌"
+          },
+          "publication_date": "2022-11-01",
+          "volume": "13",
+          "identifiers": {
+            "doi": [
+              "10.0000/sample.2022.002"
+            ]
+          },
+          "published_paper_type": "scientific_journal"
+        },
+        {
+          "rm:id": "102",
+          "paper_title": {
+            "en": "A sample conference paper",
+            "ja": "サンプル国際会議論文"
+          },
+          "authors": {
+            "en": [
+              {
+                "name": "Jane Researcher"
+              }
+            ],
+            "ja": [
+              {
+                "name": "研究 花子"
+              }
+            ]
+          },
+          "publication_name": {
+            "en": "Proceedings of the Sample Conference",
+            "ja": "サンプル会議録"
+          },
+          "publication_date": "2021-08-01",
+          "published_paper_type": "international_conference_proceedings"
+        }
+      ]
+    },
+    {
+      "@type": "presentations",
+      "items": [
+        {
+          "rm:id": "200",
+          "presentation_title": {
+            "en": "A sample invited talk",
+            "ja": "サンプル招待講演"
+          },
+          "presenters": {
+            "en": [
+              {
+                "name": "Jane Researcher",
+                "affiliation": "Example University"
+              }
+            ],
+            "ja": [
+              {
+                "name": "研究 花子",
+                "affiliation": "例大学"
+              }
+            ]
+          },
+          "event": {
+            "en": "Sample International Conference",
+            "ja": "サンプル国際会議"
+          },
+          "location": {
+            "en": "Kyoto, Japan",
+            "ja": "京都"
+          },
+          "from_event_date": "2023-07-10",
+          "is_international_presentation": true
+        },
+        {
+          "rm:id": "201",
+          "presentation_title": {
+            "en": "A sample poster",
+            "ja": "サンプルポスター発表"
+          },
+          "presenters": {
+            "en": [
+              {
+                "name": "Jane Researcher"
+              }
+            ],
+            "ja": [
+              {
+                "name": "研究 花子"
+              }
+            ]
+          },
+          "event": {
+            "en": "Sample Domestic Meeting",
+            "ja": "サンプル国内研究集会"
+          },
+          "from_event_date": "2022-03-15",
+          "presentation_type": "poster_presentation",
+          "is_international_presentation": false
+        }
+      ]
+    },
+    {
+      "@type": "teaching_experience",
+      "items": [
+        {
+          "subject_name": {
+            "en": "Calculus I",
+            "ja": "微分積分学I"
+          },
+          "institution_name": {
+            "en": "Example University",
+            "ja": "例大学"
+          },
+          "from_date": "2024-04",
+          "to_date": "9999",
+          "see_also": [
+            {
+              "@id": "https://example.org/syllabus/1",
+              "label": "url"
+            }
+          ]
+        },
+        {
+          "subject_name": {
+            "en": "Linear Algebra",
+            "ja": "線形代数"
+          },
+          "institution_name": {
+            "en": "Example University",
+            "ja": "例大学"
+          },
+          "from_date": "2021-04",
+          "to_date": "2022-03"
+        }
+      ]
+    },
+    {
+      "@type": "committee_memberships",
+      "items": [
+        {
+          "committee_name": {
+            "en": "Programme committee",
+            "ja": "プログラム委員"
+          },
+          "association": {
+            "en": "Example Mathematical Society",
+            "ja": "例数学会"
+          },
+          "committee_type": "society",
+          "from_date": "2022-04",
+          "to_date": "2023-03"
+        }
+      ]
+    },
+    {
+      "@type": "research_projects",
+      "items": [
+        {
+          "rm:id": "300",
+          "research_project_title": {
+            "en": "Sample funded project",
+            "ja": "サンプル研究課題"
+          },
+          "system_name": {
+            "en": "Grants-in-Aid for Scientific Research",
+            "ja": "科学研究費助成事業"
+          },
+          "category": {
+            "en": "Early-Career Scientists",
+            "ja": "若手研究"
+          },
+          "identifiers": {
+            "grant_number": [
+              "00X00000"
+            ]
+          },
+          "research_project_owner_role": "principal_investigator",
+          "from_date": "2021-04",
+          "to_date": "2024-03"
+        }
+      ]
+    },
+    {
+      "@type": "social_contribution",
+      "items": [
+        {
+          "social_contribution_title": {
+            "en": "Open campus lecture",
+            "ja": "オープンキャンパス模擬講義"
+          },
+          "event": {
+            "en": "Open Campus",
+            "ja": "オープンキャンパス"
+          },
+          "promoter": {
+            "en": "Example University",
+            "ja": "例大学"
+          },
+          "from_event_date": "2023-08-01",
+          "to_event_date": "2023-08-01"
+        }
+      ]
+    }
+  ]
+}

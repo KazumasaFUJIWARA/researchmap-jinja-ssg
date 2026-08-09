@@ -1,0 +1,65 @@
+{% extends 'base.jinja' %}
+
+{% block nav_sub %}
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    {%- if researcher_links %}<button class="conference-tab active" data-tab-type="researcher">{{ t.researcher_links }}</button>{% endif %}
+                    {%- if institution_links %}<button class="conference-tab" data-tab-type="institution">{{ t.institution_links }}</button>{% endif %}
+                    {%- if github_groups %}<button class="conference-tab" data-tab-type="github">GitHub</button>{% endif %}
+                </div>
+            </div>
+{% endblock %}
+
+{% block content %}
+        {%- if researcher_links %}
+        <div id="researcher-section" class="tab-section active">
+            {%- for link in researcher_links %}
+            <div class="card">
+                <div class="cv-card-title">{{ link.label }}</div>
+                <div class="cv-card-info">
+                    <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+                </div>
+            </div>
+            {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- if institution_links %}
+        <div id="institution-section" class="tab-section">
+            {%- for link in institution_links %}
+            <div class="card">
+                <div class="cv-card-title">{{ link.label }}</div>
+                {%- if link.url %}<div class="cv-card-info"><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></div>{% endif %}
+                {%- if link.children %}
+                <div class="cv-card-info">
+                    <ul style="margin-left: 1em; padding-left: 1em;">
+                        {%- for child in link.children %}
+                        <li style="margin-bottom: 0.5em;">
+                            <a href="{{ child.url }}" target="_blank">{{ child.label }}</a>
+                        </li>
+                        {%- endfor %}
+                    </ul>
+                </div>
+                {%- endif %}
+            </div>
+            {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- if github_section %}
+        <div id="github-section" class="tab-section">
+            <div class="alert-message">{{ warning }}</div>
+            {%- for group in github_groups %}
+            <h2>{{ group.title }}</h2>
+            {%- for repo in group.repository %}
+            <div class="github-card">
+                <h3><a href="{{ repo.url }}">{{ repo.title }}</a></h3>
+                {%- if repo.description %}<p>{{ repo.description }}</p>{% endif %}
+            </div>
+            {%- endfor %}
+            {%- endfor %}
+        </div>
+        {%- endif %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ base }}js/tabs.js"></script>
+{% endblock %}

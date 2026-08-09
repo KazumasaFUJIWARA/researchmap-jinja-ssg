@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2024-04-01",
+    "content": {
+      "en": "The site moved to a static build.",
+      "ja": "サイトを静的生成に移行しました。"
+    }
+  },
+  {
+    "date": "2024-01-15",
+    "content": {
+      "en": "A new preprint is available.",
+      "ja": "プレプリントを公開しました。"
+    }
+  }
+]

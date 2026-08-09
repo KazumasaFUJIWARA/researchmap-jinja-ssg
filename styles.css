@@ -1,0 +1,632 @@
+:root {
+    --primary-color: #007711;
+    --card-title-color: #007711;
+    --text-color: #00051c;
+    --background-color: #fff;
+    --nav-current-color: #fd8c73;
+    --nav-background-color: #eee;
+    --nav-border-color: #d0d7de;
+    --card-background-color: #fff;
+    --text-dark-color: #e0e0e0;
+    --background-dark-color: #121212;
+    --nav-dark-background-color: #262d31;
+    --card-dark-background-color: #2e2e2e;
+    --card-dark-title-color: #118822;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 80%;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+  
+  /* ヘッダー */
+  .header {
+    font-size: 20px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+  }
+  
+  /* ナビゲーション */
+  .navigation {
+    background-color: var(--nav-background-color);
+    border-bottom: 1px solid var(--nav-border-color);
+    margin: 0 -12.5%;
+    position: relative;
+  }
+  
+  .nav-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-main,
+  .nav-sub {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .nav-main {
+    list-style: none;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--nav-border-color);
+  }
+  
+  .nav-sub {
+    margin-left: 8px;
+  }
+  
+  .navigation a,
+  .navigation .current,
+  .nav-link {
+    display: inline-flex;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    border-radius: 0 !important;
+    position: relative;
+  }
+  
+  .navigation .current {
+    font-weight: 600;
+    border-bottom-color: var(--nav-current-color);
+  }
+  
+  .language-switch {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+  
+  hr {
+    display: none;
+  }
+  
+  /* コンテンツ */
+  .content {
+    padding-top: 10px;
+  }
+  
+  h1, h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0.5em 0;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--nav-border-color);
+  }
+  
+  /* カード共通 */
+  .card,
+  .note-card,
+  .talk-card,
+  .calendar-card,
+  .news-card {
+    background-color: var(--card-background-color);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    margin-bottom: 5pt;
+  }
+  
+  .note-card {
+    padding: 5pt;
+    margin: 1pt 1pt 10pt;
+  }
+  
+  .paper-item,
+  #journal-papers li,
+  #proceedings li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    list-style: none;
+  }
+  
+  /* 見出し共通 */
+  .cv-card-title,
+  .talk-title,
+  .note-title,
+  .paper-title {
+    font-size: 1.1em;
+    margin-bottom: 0.4em;
+    color: var(--card-title-color);
+    font-weight: bolder;
+  }
+
+  /* cv.html関連 */
+  .interests-container {
+    margin-bottom: 10pt;
+  }
+  
+  
+  /* 論文情報 */
+  .paper-authors,
+  .paper-info {
+    color: #57606a;
+    font-size: 0.95em;
+  }
+  
+  .paper-info {
+    font-size: 0.9em;
+    line-height: 1.5;
+    border-top: 1px solid #eaecef;
+    margin-top: 0.8em;
+    padding-top: 0.8em;
+  }
+
+  .paper-abstract {
+    margin: 0.6em 0 0.2em;
+    color: #57606a;
+    font-size: 0.92em;
+  }
+
+  .paper-abstract summary {
+    cursor: pointer;
+    color: #0969da;
+    font-weight: 500;
+    user-select: none;
+  }
+
+  .paper-abstract p {
+    margin: 0.6em 0 0;
+    line-height: 1.6;
+  }
+
+  .contact-note,
+  .contact-pending {
+    color: #57606a;
+    font-size: 0.92em;
+  }
+  
+  .paper-journal {
+    margin-bottom: 0.4em;
+  }
+  
+  .paper-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .paper-links a,
+  .talk-link {
+    color: #007711;
+    text-decoration: none;
+  }
+  
+  .paper-actions {
+    display: inline-flex;
+    gap: 8px;
+  }
+  
+  .bibtex-button {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #1F2328;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  /* 講演 */
+  .talks-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 10pt;
+  }
+
+  .lecture-past-note {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+  }
+
+  .lecture-year-block {
+    margin-bottom: 1.75rem;
+  }
+
+  .lecture-year-heading {
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid #007711;
+    font-size: 1.15rem;
+  }
+
+  .lecture-year-grid {
+    margin-bottom: 0;
+  }
+  
+  .talk-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .talk-authors,
+  .talk-meta {
+    color: #666;
+  }
+  
+  .talk-meta {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .talk-meta span {
+    margin-right: 1rem;
+  }
+  
+  /* タブ */
+  .conference-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-sub .conference-tabs {
+    gap: 0.5rem;
+    margin: 4px 0;
+  }
+  
+  .conference-tab {
+    padding: 8px 16px;
+    border: 1px solid #d0d7de;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .nav-sub .conference-tab {
+    font-size: 13px;
+    padding: 4px 12px;
+    white-space: nowrap;
+  }
+  
+  .conference-tab.active {
+    background-color: #007711;
+    color: #fff;
+    border-color: #007711;
+  }
+  
+  /* セクション切り替え */
+  .tab-section,
+  .conference-section,
+  .article-section {
+    display: none;
+  }
+  
+  .tab-section.active,
+  .conference-section.active,
+  .article-section.active {
+    display: block;
+  }
+  
+  /* テーブル */
+  table.record {
+    width: 100%;
+    max-width: 800px;
+    border-spacing: 20px 5px;
+  }
+  
+  table.record td {
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  
+  table.record td.contact {
+    text-align: left;
+    color: #007711;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .record-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    width: 100px;
+  }
+  
+  /* フッター */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* エラーメッセージ */
+  .error-message {
+    background-color: #fff8f8;
+    border: 1px solid #ffd6d6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    color: #d32f2f;
+  }
+  
+  .error-message p {
+    margin: 0.5rem 0;
+  }
+  
+  .error-message p:last-child {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* オーバーレイとポップアップ */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .bibtex-popup {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .bibtex-popup pre {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 12px;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .bibtex-popup-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #57606a;
+  }
+  
+  .copy-button {
+    background: #2da44e;
+    color: #fff;
+    border: 1px solid rgba(27, 31, 36, 0.15);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .bibtex-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .bibtex-popup-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2328;
+  }
+  
+  /* index.html関連 */
+  .current-position,
+  .research-interests {
+    margin-bottom: 10pt;
+  }
+  
+  /* レスポンシブ */
+  @media (max-width: 768px) {
+    .content {
+      padding: 1rem;
+    }
+  }
+  
+  /* バッジ・カードその他 */
+  .poster-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.9em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .interest-card {
+    display: inline-block;
+    background-color: #e0f7fa;
+    color: #00796b;
+    border: 1px solid #b2dfdb;
+    border-radius: 16px;
+    padding: 4px 12px;
+    margin: 2px 6px 2px 0;
+    font-size: 0.95em;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    transition: background 0.2s;
+  }
+  
+  .interest-card:hover {
+    background-color: #b2ebf2;
+  }
+  
+  .calendar-url-box,
+  .link-text {
+    background: #f6f8fa;
+    color: #333;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-size: 0.95em;
+    max-width: 100%;
+    overflow-x: auto;
+    word-break: break-word;
+    box-sizing: border-box;
+    white-space: pre-line;
+  }
+  
+  .theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.7em;
+    padding: 0.5em;
+    color: inherit;
+  }
+  
+  .theme-toggle:hover {
+    opacity: 0.8;
+  }
+
+  .syllabus{
+    margin-top: 5pt;
+  }
+  
+  .syllabus-button {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #1F2328;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .syllabus-button:hover {
+    background-color: #e6ebf1;
+  }
+
+  .alert-message{
+    color: red;
+    margin-bottom: 10pt;
+  }
+
+  .cv-card-url-info{
+    margin-bottom: 10pt;
+  }
+  
+  .card.calendar-card{
+    margin-bottom: 10pt;
+  }
+
+  .link-container{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  p.text-math {
+    text-indent: 1em;
+  }
+
+  /* ========== アニメーション ========== */
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ページロード：コンテンツ全体をフェードイン */
+  .content {
+    animation: fadeInUp 0.4s ease both;
+  }
+
+  /* タブ切替：アクティブセクションをフェードイン */
+  .tab-section.active,
+  .conference-section.active,
+  .article-section.active {
+    animation: fadeIn 0.25s ease both;
+  }
+
+  /* カードホバー統一（talk-card 以外にも適用） */
+  .card:hover,
+  .paper-item:hover,
+  .news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ナビリンクホバー */
+  .nav-link:not(.current):hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* アクセシビリティ：モーション低減設定を尊重 */
+  @media (prefers-reduced-motion: reduce) {
+    .content,
+    .tab-section.active,
+    .conference-section.active,
+    .article-section.active {
+      animation: none;
+    }
+    .card,
+    .paper-item,
+    .news-card,
+    .talk-card,
+    .conference-tab {
+      transition: none;
+    }
+  }

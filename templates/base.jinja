@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+{%- if page.og_description %}
+    <meta property="og:description" content="{{ page.og_description }}"/>
+{%- endif %}
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ base }}styles.css">
+    <link rel="stylesheet" href="{{ base }}dark.css">
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+{%- block head_extra %}{% endblock %}
+</head>
+<body>
+{% include '_header.jinja' %}
+    <nav class="navigation">
+        <div class="nav-container">
+{% include '_nav.jinja' %}
+{%- block nav_sub %}{% endblock %}
+        </div>
+    </nav>
+{% if page.rule %}
+    <hr>
+{% endif %}
+{%- block before_content %}{% endblock %}
+    <div class="content">
+{% block content %}{% endblock %}
+    </div>
+{%- block after_content %}{% endblock %}
+{% include '_footer.jinja' %}
+    <script src="{{ base }}js/theme.js"></script>
+{%- block scripts %}{% endblock %}
+</body>
+</html>
