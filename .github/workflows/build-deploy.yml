@@ -43,8 +43,6 @@ jobs:
           SOURCE_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # The deploy branch holds only build output, with no shared history,
           # so each publish replaces it wholesale.
@@ -52,6 +50,10 @@ jobs:
           cp -a dist/. .deploy/
           cd .deploy
           git init -q -b deploy
+          # Config must be set in this new repo; the checkout's local config
+          # does not apply here.
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -q -m "Build site from ${SOURCE_SHA}"
           git push -q --force \
