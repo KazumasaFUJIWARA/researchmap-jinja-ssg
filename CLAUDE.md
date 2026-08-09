@@ -26,6 +26,7 @@ failure leaves the previous site live rather than publishing a broken one.
 | `json/news.json` | hand-maintained news entries |
 | `site.json` | navigation, per-page `<head>` metadata, UI strings, thesis records, asset lists |
 | `templates/` | Jinja. `base.jinja` holds the shell; each page extends it |
+| `static/` | publishable assets (CSS, favicon, PDFs, home stubs, notes); public URLs via `relocated_assets` |
 | `static/js/` | JavaScript that stays in the browser |
 | `scripts/build.py` | one context builder per page type, dispatched through `BUILDERS` |
 | `scripts/verify.py` | output gate |

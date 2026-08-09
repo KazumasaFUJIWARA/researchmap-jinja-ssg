@@ -137,9 +137,11 @@ Working outward from the least site-specific:
 - `scripts/` — usually fine as-is; `build.py` has one context builder per page
   type, so add or remove builders to match your pages.
 - `site.json` — navigation, `<head>` metadata, per-language labels, which pages
-  exist in which language, which files are copied verbatim.
+  exist in which language, and which `static/` files are copied where
+  (`relocated_assets`).
 - `templates/` — your page structure. Everything else follows from these.
-- `static/js/` — only what genuinely needs the browser.
+- `static/` — CSS, favicon, PDFs and other publishable files; `static/js/`
+  holds only what genuinely needs the browser.
 - `json/profile.json` — hand-maintained: contact details, office hours, links
   and any field researchmap does not carry.
 

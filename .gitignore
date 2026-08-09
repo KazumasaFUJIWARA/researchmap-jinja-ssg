@@ -3,3 +3,4 @@ dist.old/
 __pycache__/
 node_modules/
 .venv/
+log/work.md

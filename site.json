@@ -349,18 +349,45 @@
       }
     }
   ],
-  "verbatim_assets": [
-    "DoctorThesis.pdf",
-    "MasterThesis.pdf",
-    "dark.css",
-    "favicon.ico",
-    "home_i.html",
-    "home_j.html",
-    "ja/note/Differentiablity.pdf",
-    "ja/ryukoku_logo.png",
-    "styles.css"
+  "verbatim_assets": [],
+  "relocated_assets": [
+    [
+      "static/DoctorThesis.pdf",
+      "DoctorThesis.pdf"
+    ],
+    [
+      "static/MasterThesis.pdf",
+      "MasterThesis.pdf"
+    ],
+    [
+      "static/dark.css",
+      "dark.css"
+    ],
+    [
+      "static/favicon.ico",
+      "favicon.ico"
+    ],
+    [
+      "static/home_i.html",
+      "home_i.html"
+    ],
+    [
+      "static/home_j.html",
+      "home_j.html"
+    ],
+    [
+      "static/ja/note/Differentiablity.pdf",
+      "ja/note/Differentiablity.pdf"
+    ],
+    [
+      "static/ja/ryukoku_logo.png",
+      "ja/ryukoku_logo.png"
+    ],
+    [
+      "static/styles.css",
+      "styles.css"
+    ]
   ],
-  "relocated_assets": [],
   "extra_expected_pages": [
     "home_i.html",
     "home_j.html"

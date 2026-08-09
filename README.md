@@ -28,12 +28,16 @@ ok: 16 pages verified
 json/                  researchmap data plus hand-maintained profile and news
 site.json              navigation, page metadata, per-language strings
 templates/             Jinja templates, shared across both languages
+static/                publishable assets (CSS, favicon, PDFs, home stubs, notes)
 static/js/             the JavaScript that stays in the browser
 scripts/build.py       json/ + templates/ -> dist/
 scripts/verify.py      gates dist/ before anything is published
 scripts/domdump.mjs    renders a page under jsdom and dumps a normalised DOM
 updater/               refreshes json/data.json from the researchmap API
 ```
+
+Assets under `static/` keep their public URLs via `relocated_assets` in
+`site.json` (for example `static/styles.css` is still served as `/styles.css`).
 
 Two things stay client-side on purpose: tab switching, theme toggling and the
 BibTeX dialogue, which need no data; and the numerical simulations on the notes
@@ -73,5 +77,5 @@ client-side rendering and is kept for the next such change.
 
 ## Licence
 
-MIT for the code. The content under `json/`, `ja/note/` and the thesis PDFs is
-the author's own work and is not covered by that licence.
+MIT for the code. The content under `json/`, `static/ja/note/` and the thesis
+PDFs is the author's own work and is not covered by that licence.
