@@ -528,6 +528,11 @@
       "url": "https://github.com/KazumasaFUJIWARA",
       "repository": [
         {
+          "title": "researchmap-jinja-ssg（本サイトのソース）",
+          "url": "https://github.com/KazumasaFUJIWARA/researchmap-jinja-ssg",
+          "description": "ResearchMap API のデータを Jinja で静的 HTML に焼く個人サイトです。ResearchMap API をひな形にしている場合の SSG 化の参考にしてください。ページ構成の説明はリポジトリの README を参照。"
+        },
+        {
           "title": "[非公式] 卒業論文 TeXスタイル",
           "url": "https://github.com/KazumasaFUJIWARA/rgt",
           "description": "予告なく書式を変更する可能性があります。"

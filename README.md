@@ -1,81 +1,127 @@
 # researchmap-jinja-ssg
 
-The source of a researcher's personal homepage. Academic records come from the
-[researchmap](https://researchmap.jp/) API; Jinja renders them to HTML at build
-time; only the finished HTML is published.
+藤原和将（龍谷大学 先端理工学部）の研究者個人サイトのソースです。
 
-Nothing on the site fetches JSON in the browser. The publication list, CV and
-talk list exist in the served HTML, and `json/` never leaves this repository.
+ResearchMap API で業績を取得し、**Jinja で静的 HTML を生成（SSG）**して公開します。サーバー上ではビルドしません。完成品だけを `deploy` ブランチ経由で配信します。
 
-If you want the same setup for your own site, read
-[`docs/ADAPTING.md`](docs/ADAPTING.md).
+ResearchMap API をひな形にしたサイトを運用している場合、**SSG 化の参考**にしてください。旧来のようにブラウザで `fetch(json)` する構成から、ビルド時に HTML へ焼き込む形へ移行する一例です。
 
-## Build
+公開リポジトリ: https://github.com/KazumasaFUJIWARA/researchmap-jinja-ssg
 
-```console
-$ pip install -r requirements-build.txt
-$ python scripts/build.py
-built 14 page(s) -> dist/
-$ python scripts/verify.py
-ok: 16 pages verified
-```
+---
 
-`dist/` is the complete site. Serve it from any static host.
-
-## Layout
+## 公開の流れ
 
 ```
-json/                  researchmap data plus hand-maintained profile and news
-site.json              navigation, page metadata, per-language strings
-templates/             Jinja templates, shared across both languages
-static/                publishable assets (CSS, favicon, PDFs, home stubs, notes)
-static/js/             the JavaScript that stays in the browser
-scripts/build.py       json/ + templates/ -> dist/
-scripts/verify.py      gates dist/ before anything is published
-scripts/domdump.mjs    renders a page under jsdom and dumps a normalised DOM
-updater/               refreshes json/data.json from the researchmap API
+ResearchMap API
+    → updater/update_merge.py → json/data.json
+json/*.json + templates/ + static/
+    → scripts/build.py → dist/
+    → GitHub Actions が orphan ブランチ `deploy` へ force-push
+サーバー
+    → deploy を浅い clone / 日次 sync（fetch + reset --hard）
+    → document root で静的配信
 ```
 
-Assets under `static/` keep their public URLs via `relocated_assets` in
-`site.json` (for example `static/styles.css` is still served as `/styles.css`).
+`deploy` は履歴を共有しない orphan ブランチです。サーバー側は `git pull` ではなく `git fetch --depth 1 && git reset --hard origin/deploy` で追従します。
 
-Two things stay client-side on purpose: tab switching, theme toggling and the
-BibTeX dialogue, which need no data; and the numerical simulations on the notes
-page, which are the point of that page.
+---
 
-## Publishing
+## ページ構成
 
-`.github/workflows/build-deploy.yml` builds on every push to `main`, runs
-`verify.py`, and force-pushes `dist/` to an orphan `deploy` branch. The web
-server pulls that branch and serves it directly — it never builds, and never
-receives `json/`, `templates/` or `scripts/`.
+| ページ | 英語 | 日本語 | 内容 |
+|--------|:----:|:------:|------|
+| ホーム | `index.html` | `ja/index.html` | 所属・研究テーマ・連絡先・ニュース |
+| CV | `cv.html` | `ja/cv.html` | 経歴・学位・職歴・受賞など |
+| 論文 | `articles.html` | `ja/articles.html` | 論文リスト・BibTeX |
+| 講演 | `talks.html` | `ja/talks.html` | 国際 / 国内講演 |
+| リンク | `links.html` | `ja/links.html` | 外部リンク・GitHub（GitHub タブは日本語のみ） |
+| 講義 | — | `ja/lectures.html` | 講義情報・オフィスアワー |
+| ノート | — | `ja/notes.html` | 覚書・数値シミュレーション |
+| 予定 | — | `ja/schedule.html` | カレンダー |
 
-Because `deploy` is replaced wholesale rather than appended to, a server
-following it needs
+ビルド成果物には `json/` を載せません。表示に必要な文字列は HTML 生成時に埋め込みます。ノート内のインタラクティブ部分など、必要なクライアント JS だけを `static/js/` から同梱します。
 
-```console
-$ git fetch --depth 1 && git reset --hard origin/deploy
+---
+
+## ディレクトリ構成（ソース）
+
+```
+.
+├── templates/           # Jinja テンプレート（*.jinja）
+├── static/              # ビルドにコピーする静的ファイル（CSS / JS / 画像など）
+├── json/                # データ（公開ブランチ deploy には含めない）
+│   ├── data.json        # ResearchMap から取得（直接編集禁止）
+│   ├── profile.json     # 連絡先・リンク・オフィスなど（手動）
+│   ├── news.json        # ニュース（手動）
+│   └── note.json        # 覚書（手動）
+├── scripts/
+│   ├── build.py         # dist/ を生成
+│   └── verify.py        # 成果物の検査
+├── updater/             # ResearchMap 取得スクリプト
+├── site.json            # ナビ・ページメタなどサイト設定
+├── dist/                # ローカルビルド出力（gitignore）
+└── .github/workflows/   # build-deploy / ResearchMap 更新
 ```
 
-`git pull` cannot follow a rewritten history.
+---
 
-`.github/workflows/update-researchmap.yml` refreshes `json/data.json` on demand.
-The researchmap API needs no credentials, so neither workflow uses a secret.
+## ローカルでのビルド
 
-## Verification
+```bash
+pip install -r requirements-build.txt
+python scripts/build.py
+python scripts/verify.py dist
+python -m http.server 8000 --directory dist
+```
 
-`verify.py` fails the build if a page is missing, an internal link is broken, a
-list holds implausibly few items, or — the check that matters most — if any
-generated page still refers to `json/`. That last one is what keeps the raw data
-off the public site; one overlooked `fetch` would put it back.
+ResearchMap データの再取得:
 
-`domdump.mjs` exists for migrations. It renders a page under jsdom, executes its
-scripts against a filesystem-backed `fetch` shim, and prints a normalised DOM
-tree. Running the same normaliser over generated HTML turns "does the new page
-match the old one" into a diff. It was written to move this site off
-client-side rendering and is kept for the next such change.
+```bash
+cd updater
+python3 update_merge.py   # 推奨（セクション別取得）
+```
 
-## Licence
+`json/data.json` の手編集はしないでください。
 
-MIT for the code. The content under `json/`, `static/ja/note/` and the thesis
-PDFs is the author's own work and is not covered by that licence.
+---
+
+## データ更新の目安
+
+| 対象 | 編集・実行 |
+|------|------------|
+| 論文・講演・CV 等 | `updater/update_merge.py` |
+| ニュース | `json/news.json` |
+| 覚書 | `json/note.json` |
+| 連絡先・リンク・オフィス | `json/profile.json` |
+| 見た目・文言の枠 | `templates/` / `site.json` / `static/` |
+
+`main` への push（および月次スケジュール）で Actions が build → `deploy` 更新します。
+
+---
+
+## 本番サーバー（概要）
+
+想定レイアウト（旧 whale のパスを踏襲）:
+
+```
+~/mypage-deploy                          # deploy ブランチの浅い clone
+/var/www/fujiwara-kazumasa.math.ryukoku.ac.jp/html
+    → ~/mypage-deploy へのシンボリックリンク
+```
+
+詳細なサーバー作業メモは運用側の `DEPLOY-README` 等を参照してください。
+
+---
+
+## 参考
+
+- [ResearchMap API](https://api.researchmap.jp/KazumasaFUJIWARA/)
+- [Zenn: researchmap API の使い方](https://zenn.dev/nakamura196/articles/bb91ead115b920)
+- [GitHub Primer](https://primer.style/)（UI の雰囲気の参考）
+
+---
+
+## ライセンス
+
+MIT License
