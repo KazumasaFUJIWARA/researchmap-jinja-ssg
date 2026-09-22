@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-22",
+    "content": {
+      "ja": "ホームページの公開サーバーを移転しました。公開URLは <a href=\"https://fujiwara-kazumasa.math.ryukoku.ac.jp/\">https://fujiwara-kazumasa.math.ryukoku.ac.jp/</a> です。",
+      "en": "The homepage has been moved to a new hosting server. The public URL is <a href=\"https://fujiwara-kazumasa.math.ryukoku.ac.jp/\">https://fujiwara-kazumasa.math.ryukoku.ac.jp/</a>."
+    }
+  },
+  {
     "date": "2026-04-27",
     "content": {
       "ja": "ダークモード管理を一元化し、予定ページのカレンダー構成を更新しました。京都駅前セミナーのカレンダーを追加し、登録不要のカレンダーは登録リンク一覧から非表示にしました。ResearchMap APIを項目別取得に切り替え、論文・講演のデータ取得漏れを解消しました。",

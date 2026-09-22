@@ -617,9 +617,20 @@ def build_lectures_context(lang: str, data: dict, profile: dict, news: list) -> 
         if form_url else "※事前に連絡フォームよりご予約ください。"
     )
 
+    portals = []
+    for portal in profile.get("lecture_portals") or []:
+        label = portal.get("label") or {}
+        note_field = portal.get("note") or {}
+        portals.append({
+            "label": label.get(lang) or label.get("ja") or "",
+            "url": portal.get("url") or "",
+            "note": note_field.get(lang) or note_field.get("ja") or "",
+        })
+
     return {
         "office_hours": [f"{h['day']}: {h['time']}" for h in hours],
         "appointment_note": note,
+        "lecture_portals": portals,
         "ongoing": group_by_subject(ongoing, lang),
         "past_years": [
             {"label": "年度不明" if key == "unknown" else f"{key}年度",

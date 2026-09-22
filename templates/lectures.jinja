@@ -22,6 +22,17 @@
 
 {% block content %}
         <div id="ongoing-section" class="tab-section active">
+            {%- if lecture_portals %}
+            <h2>関連システム</h2>
+            <div id="lecture-portals" class="talks-grid">
+                {%- for portal in lecture_portals %}
+                <div class="talk-card">
+                    <div class="talk-title"><a href="{{ portal.url }}" target="_blank" rel="noopener noreferrer">{{ portal.label }}</a></div>
+                    {%- if portal.note %}<div class="talk-meta">{{ portal.note }}</div>{% endif %}
+                </div>
+                {%- endfor %}
+            </div>
+            {%- endif %}
             <h2>オフィスアワー</h2>
             <div id="office-hours">
                 {%- if office_hours %}
