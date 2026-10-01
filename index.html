@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homepage of Kazumasa Fujiwara">
+    <meta name="keywords" content="Kazumasa,Fujiwara,Kazumasa Fujiwara">
+    <meta property="og:description" content="This is a homepage of Fujiwara Kazumasa. Here my CV and publication list are posted."/>
+    <title>Homepage of Kazumasa Fujiwara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark.css">
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="top-name">Kazumasa FUJIWARA</div>
+        <div>
+            <button class="theme-toggle">Dark Mode 🌙</button>
+            <a href="ja/index.html" class="language-switch">日本語</a>
+        </div>
+    </div>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-main" id="main-nav">
+                <a href="index.html" class="nav-link current">Home</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="articles.html" class="nav-link">Articles</a>
+                <a href="talks.html" class="nav-link">Talks</a>
+                <a href="links.html" class="nav-link">Links</a>
+            </div>
+
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-tab-type="home">Home</button>
+                    <button class="conference-tab" data-tab-type="contact">Contact</button>
+                    <button class="conference-tab" data-tab-type="external">External ID</button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="content">
+
+        <div id="home-section" class="tab-section active">
+            <section class="current-position">
+                <h2>Current Position</h2>
+                <div id="current-position">Associate Professor<br>@ Faculty of Advanced Science and Technology Course of Applied Mathematics and Informatics <br>Ryukoku University</div>
+            </section>
+
+            <section class="research-interests">
+                <h2>Research Interests</h2>
+                <div id="research-interests"><div class="profile-text"><p>I am conducting research on partial differential equations and related inequalities. Recently, my focus has been on the global-in-time solvability of semilinear dissipative wave equations.</p></div>
+                </div>
+            </section>
+
+            <section class="news">
+                <h2>News</h2>
+                <div id="news">
+                    <div class="card news-card">
+                        <div class="news-date">2026-09-22</div>
+                        <div class="news-content">The homepage has been moved to a new hosting server. The public URL is <a href="https://fujiwara-kazumasa.math.ryukoku.ac.jp/">https://fujiwara-kazumasa.math.ryukoku.ac.jp/</a>.</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2026-04-27</div>
+                        <div class="news-content">Unified dark mode management, updated the schedule page calendar configuration. Added Kyoto Ekimae Seminar calendar and hid free/busy-only calendars from the registration links. Switched ResearchMap API to per-section fetching to fix missing papers and presentations.</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-06-05 16:17</div>
+                        <div class="news-content">Published papers have been modified</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-25 20:47</div>
+                        <div class="news-content">Published papers have been updated</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-08</div>
+                        <div class="news-content">New tabs for Notes, Numerical Simulations, and Supplementary Lecture Materials have been added. The site now uses a SPA-style dynamic tab system with improved MathJax rendering for mathematical expressions.</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-07 15:25</div>
+                        <div class="news-content">Published papers have been updated</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-06 19:02</div>
+                        <div class="news-content">Teaching experience has been updated</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-05</div>
+                        <div class="news-content">Updated the HP. Added a partial integration with ResearchMap.</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="contact-section" class="tab-section">
+            <section class="contact">
+                <div class="section">
+                    <table class="record" id="contact-info">
+                        <tr valign="top">
+                            <td class="contact">Office</td>
+                            <td>Room 501, Building 1, Seta Campus, Ryukoku University</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="contact">Address</td>
+                            <td>Faculty of Advanced Science and Technology, Ryukoku University, 1-5 Yokotani, Seta Oe-cho, Otsu, Shiga, Japan<br>520-2194</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="contact">Contact</td>
+                            <td class="contact-value"><a href="https://docs.google.com/forms/d/e/1FAIpQLSei82qCoVuWyqJpi9Hx4D_IN9TIiVnjvydtZ0NTaW_F8QCN7w/viewform" target="_blank" rel="noopener noreferrer">Contact (Google Form)</a><br><span class="contact-note">Email addresses are not published due to spam protection. Please use the form below.</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="external-section" class="tab-section">
+            <section class="external-ids">
+                <div id="external-ids">
+                    <div class="card external-id-card">
+                        <div class="external-id-label">researchmap</div>
+                        <div class="external-id-link"><a href="https://researchmap.jp/KazumasaFUJIWARA/?lang=english" target="_blank">https://researchmap.jp/KazumasaFUJIWARA/?lang=english</a></div>
+                    </div>
+                    <div class="card external-id-card">
+                        <div class="external-id-label">orcid</div>
+                        <div class="external-id-link"><a href="https://orcid.org/0000-0002-3796-4570" target="_blank">https://orcid.org/0000-0002-3796-4570</a></div>
+                    </div>
+                    <div class="card external-id-card">
+                        <div class="external-id-label">j_global</div>
+                        <div class="external-id-link"><a href="https://jglobal.jst.go.jp/detail?JGLOBAL_ID=201901020665418797" target="_blank">https://jglobal.jst.go.jp/detail?JGLOBAL_ID=201901020665418797</a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <footer>
+        <p>© 2026 Kazumasa Fujiwara</p>
+        <p><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">To Top</a></p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/tabs.js"></script>
+
+</body>
+</html>

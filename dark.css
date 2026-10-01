@@ -1,0 +1,240 @@
+html.dark,
+html.dark body,
+html.dark .header,
+html.dark .section,
+html.dark .content,
+html.dark footer {
+    background-color: var(--background-dark-color) !important;
+    color: var(--text-dark-color) !important;
+}
+
+html.dark .navigation,
+html.dark .lecture-header {
+    background-color: var(--nav-dark-background-color) !important;
+    color: var(--text-dark-color) !important;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.05);
+}
+
+html.dark .top-name {
+    color: var(--primary-color) !important;
+    font-size: bold !important;
+}
+
+html.dark .navigation a,
+html.dark .navigation .current,
+html.dark .language-switch,
+html.dark .talk-link,
+html.dark .news-content,
+html.dark .news-content a,
+html.dark .contact-value a {
+    color: var(--text-dark-color) !important;
+}
+
+html.dark .card,
+html.dark .talk-card,
+html.dark .calendar-card,
+html.dark .paper-item,
+html.dark .lecture-card,
+html.dark .bibtex-popup,
+html.dark .note-card {
+    background-color: var(--card-dark-background-color) !important;
+    color: var(--text-dark-color) !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.05);
+}
+
+html.dark .current-position,
+html.dark .research-interests,
+html.dark .news,
+html.dark .news-container,
+html.dark .contact {
+    background-color: var(--dark-background-color) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+html.dark .paper-title,
+html.dark .note-title,
+html.dark .lecture-title,
+html.dark .contact-label,
+html.dark .cv-card-title,
+html.dark .news-date,
+html.dark .position-title,
+html.dark .talk-title {
+    color: var(--card-dark-title-color) !important;
+    font-weight: bold;
+}
+
+html.dark .lecture-year-heading {
+    color: var(--card-dark-title-color) !important;
+    border-bottom-color: #33cc77;
+}
+
+html.dark .lecture-past-note {
+    color: #aaa !important;
+}
+
+html.dark .github-card-title{
+    color: #00aaaa !important;
+}
+
+html.dark .paper-authors,
+html.dark .paper-info,
+html.dark .paper-abstract,
+html.dark .paper-abstract p,
+html.dark .contact-note,
+html.dark .contact-pending,
+html.dark .talk-meta,
+html.dark .talk-authors,
+html.dark .position-info,
+html.dark .position-date,
+html.dark .cv-card-info,
+html.dark .cv-card-date,
+html.dark .conference-tab,
+html.dark .talk-meta span,
+html.dark .paper-journal,
+html.dark .paper-links a,
+html.dark .contact-value,
+html.dark .position-info-group,
+html.dark .interest-card {
+    color: #aaa !important;
+}
+
+html.dark .bibtex-popup pre {
+    background: #2c2c2c !important;
+    color: #ccc !important;
+    border-color: #444 !important;
+}
+
+html.dark .error-message {
+    background-color: #3a1f1f !important;
+    border: 1px solid #b00020 !important;
+    color: #f28b82 !important;
+}
+
+html.dark .copy-button,
+html.dark .bibtex-button {
+    background-color: #2c2c2c !important;
+    border: 1px solid #555 !important;
+    color: #eee !important;
+}
+
+html.dark .bibtex-popup-close {
+    color: #999 !important;
+}
+
+html.dark .overlay {
+    background: rgba(0,0,0,0.7) !important;
+}
+
+html.dark .conference-tab,
+html.dark .subtab-btn {
+    background-color: #2c2c2c !important;
+    border-color: #555 !important;
+    color: var(--text-dark-color) !important;
+}
+
+html.dark .tab-section,
+html.dark .article-section {
+    color: var(--text-dark-color) !important;
+}
+
+html.dark .interest-card {
+    background-color: #1f1f1f !important;
+    border-color: #333 !important;
+}
+
+html.dark .external-ids {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+html.dark .card:hover,
+html.dark .talk-card:hover,
+html.dark .lecture-card:hover,
+html.dark .paper-item:hover,
+html.dark .news-card:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .nav-link:not(.current):hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark table.record td,
+html.dark td.record {
+    color: var(--text-dark-color) !important;
+}
+
+html.dark table.record td.contact {
+    color: var(--primary-color) !important;
+}
+
+html.dark hr {
+    border-color: #444 !important;
+}
+
+html.dark .nav-sub .conference-tab {
+    background-color: #2c2c2c !important;
+    color: var(--text-dark-color) !important;
+    border-color: #555 !important;
+}
+
+html.dark .subtab-btn.active, html.dark .subtab-btn:focus,
+html.dark .nav-sub .conference-tab.active {
+    background-color: var(--primary-color) !important;
+    border-color: #007711 !important;
+    color: #fff !important;
+}
+
+html.dark .news-item {
+    border-bottom: 1px solid #333 !important;
+}
+
+html.dark a:visited {
+    color: #40c4ff !important;
+}
+
+html.dark a:link, html.dark a:active {
+    color: #b388ff !important;
+}
+
+html.dark .navigation a,
+html.dark .nav-link,
+html.dark .nav-main a,
+html.dark .nav-sub a {
+    color: var(--text-dark-color) !important;
+}
+
+html.dark .copy-button {
+    background-color: var(--primary-color) !important;
+}
+
+html.dark .link-text {
+    background: #23272e !important;
+    color: #b3e5fc !important;
+    border: 1px solid #444 !important;
+    width: 90%;
+    max-width: 100%;
+    overflow-x: auto;
+    word-break: break-all;
+    white-space: pre-line;
+    box-sizing: border-box;
+}
+
+html.dark .syllabus-button {
+    background: var(--card-dark-background-color);
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #1F2328;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  
+html.dark .syllabus-button:hover {
+    background-color: #333;
+  }
