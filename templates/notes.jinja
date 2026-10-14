@@ -11,6 +11,14 @@
 
 {% block head_extra %}
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
         (function() {
@@ -110,7 +118,7 @@
             max-width: 100%;
         }
         .scale-control { display: flex; align-items: center; gap: 10px; margin: 12px 0; }
-        .proposition, .remark {
+        .proposition, .remark, .proof {
             background: #f6f8fa;
             border-left-width: 4px;
             padding: 12px 16px;
@@ -119,17 +127,23 @@
         }
         .proposition { border-left: 4px solid #007711; }
         .remark { border-left: 4px solid #ff8800; }
-        html.dark .proposition, html.dark .remark {
+        .proof { border-left: 4px solid #888; }
+        .proposition > h3,
+        .remark > h3,
+        .proof > h3 {
+            margin: 0 0 0.5em;
+        }
+        html.dark .proposition, html.dark .remark, html.dark .proof {
             background: #262d31;
-            color: #fff;
+            color: var(--text-dark-color);
         }
         html.dark .proposition { border-left: 4px solid #33cc77; }
         html.dark .remark { border-left: 4px solid #ffb366; }
-        html.dark .proposition .mjx-math,
-        html.dark .remark .mjx-math,
-        html.dark .proposition .mjx-chtml,
-        html.dark .remark .mjx-chtml {
-            color: #fff !important;
+        html.dark .proof { border-left: 4px solid #888; }
+        html.dark #differentiability-note mjx-container,
+        html.dark #differentiability-note .mjx-chtml,
+        html.dark #differentiability-note .mjx-math {
+            color: var(--text-dark-color) !important;
         }
         html.dark .subtab-btn {
             background-color: #262d31;

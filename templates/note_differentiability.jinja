@@ -1,7 +1,6 @@
 {% extends 'base.jinja' %}
 
 {% block head_extra %}
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script>
     window.MathJax = {
       tex: {
@@ -10,14 +9,35 @@
       }
     };
   </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
-    body { max-width: 800px; margin: 2em auto; background: var(--background-color); color: var(--text-color); }
+    .content { max-width: 800px; margin: 2em auto; }
     h1, h2, h3 { color: var(--primary-color); }
-    .env-title { font-weight: bold; margin-top: 1.5em; }
-    .env-block { background: #f6f8fa; border-left: 4px solid #007711; padding: 1em; margin: 1em 0; }
-    .proof { background: #f9f9f9; border-left: 4px solid #888; padding: 1em; margin: 1em 0; }
-    .remark { background: #f6f8fa; border-left: 4px solid #888; padding: 1em; margin: 1em 0; }
+    .env-title { font-weight: bold; margin: 0 0 0.5em; }
+    .env-block, .proof, .remark {
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 6px;
+    }
+    .env-block { background: #f6f8fa; border-left: 4px solid #007711; }
+    .proof { background: #f9f9f9; border-left: 4px solid #888; }
+    .remark { background: #f6f8fa; border-left: 4px solid #888; }
     .reference { font-size: 0.95em; color: #555; margin-top: 2em; }
+    html.dark .env-block,
+    html.dark .proof,
+    html.dark .remark {
+      background: #262d31;
+      color: var(--text-dark-color);
+    }
+    html.dark .env-block { border-left-color: #33cc77; }
+    html.dark .proof { border-left-color: #888; }
+    html.dark .remark { border-left-color: #ffb366; }
+    html.dark .reference { color: #aaa; }
+    html.dark mjx-container,
+    html.dark .mjx-chtml,
+    html.dark .mjx-math {
+      color: var(--text-dark-color) !important;
+    }
   </style>
 {% endblock %}
 
@@ -83,7 +103,7 @@
         \[
         \varphi(\theta) = \lim_{r \searrow 0} \frac{f(r \cos \theta, r \sin \theta)-f(0,0)}{r} = A \cos \theta + B \sin \theta
         \]
-        であるから，$o(r)=0$である．従って，$f(x,y)=Ax+By$を得る．
+        である．従って，$f(x,y)=Ax+By$を得る．
       </div>
     </div>
     <div class="remark">

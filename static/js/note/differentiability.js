@@ -56,7 +56,7 @@ export function renderDifferentiabilityNote(container) {
                     <div class="math-display">
                         \\[ \\varphi(\\theta) = \\lim_{r \\searrow 0} \\frac{f(r \\cos \\theta, r \\sin \\theta)-f(0,0)}{r} = A \\cos \\theta + B \\sin \\theta \\]
                     </div>
-                    <p>であるから，$o(r)=0$である．従って，$f(x,y)=Ax+By$を得る．</p>
+                    <p>である．従って，$f(x,y)=Ax+By$を得る．</p>
                 </div>
             </section>
 
