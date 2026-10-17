@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="藤原和将の講義情報">
+    <meta name="keywords" content="藤原和将, 講義, 授業">
+    <title>講義 - 藤原和将</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../dark.css">
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="top-name">藤原 和将</div>
+        <div>
+            <button class="theme-toggle">ダークモード 🌙</button>
+            <a href="../index.html" class="language-switch">English</a>
+        </div>
+    </div>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-main" id="main-nav">
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="cv.html" class="nav-link">履歴書</a>
+                <a href="articles.html" class="nav-link">論文</a>
+                <a href="talks.html" class="nav-link">講演</a>
+                <a href="lectures.html" class="nav-link current">講義</a>
+                <a href="notes.html" class="nav-link">ノート</a>
+                <a href="schedule.html" class="nav-link">予定</a>
+                <a href="links.html" class="nav-link">リンク</a>
+            </div>
+
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-lecture-type="ongoing">現在</button>
+                    <button class="conference-tab" data-lecture-type="past">過去の講義</button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="content">
+
+        <div id="ongoing-section" class="tab-section active">
+            <h2>関連システム</h2>
+            <div id="lecture-portals" class="talks-grid">
+                <div class="talk-card">
+                    <div class="talk-title"><a href="https://fujiwara-kazumasa-lab.math.ryukoku.ac.jp/portal/" target="_blank" rel="noopener noreferrer">学生用ポータル</a></div><div class="talk-meta">欠席届・加点申請・採点修正申請</div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title"><a href="https://fujiwara-kazumasa-lab.math.ryukoku.ac.jp/quiz-review/" target="_blank" rel="noopener noreferrer">TA用システム</a></div><div class="talk-meta">小テスト・採点の確認（講義管理）</div>
+                </div>
+            </div>
+            <h2>オフィスアワー</h2>
+            <div id="office-hours">月: 12:30-13:30<br>木: 12:30-13:00
+                <br>
+                ※事前に<a href="https://docs.google.com/forms/d/e/1FAIpQLSei82qCoVuWyqJpi9Hx4D_IN9TIiVnjvydtZ0NTaW_F8QCN7w/viewform" target="_blank" rel="noopener noreferrer">お問い合わせ（Googleフォーム）</a>よりご予約ください。
+                <br>
+                <br>
+            </div>
+            <h2>現在の主な講義</h2>
+            <div id="ongoing-lectures" class="talks-grid"><p>該当する講義はありません。</p>
+            </div>
+        </div>
+        <div id="past-section" class="tab-section">
+            <h2>過去の講義</h2>
+            <p class="lecture-past-note">年度（4月始まり）ごとに整理しています。</p>
+            <div id="past-lectures">
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2026年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">複素解析I</div>
+                    <div class="talk-meta">龍谷大学 (2026-04 ～ 2026-05)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">複素解析II</div>
+                    <div class="talk-meta">龍谷大学 (2026-06 ～ 2026-08)
+                    </div>
+                </div>
+                    </div>
+                </section>
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2025年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">プロジェクト演習</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2025-04 ～ 2025-07)<div class="syllabus"><a href="https://syllabus.ws.ryukoku.ac.jp/acrsw/CSylNoSSO/CNoSSO.do?i=Y001017010&amp;n=2025" class="syllabus-button" target="_blank" rel="noopener noreferrer">シラバス</a></div>
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">基礎解析特論</div>
+                    <div class="talk-meta">龍谷大学 (2025-09 ～ 2026-03)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">数理情報演習</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2025-04 ～ 2025-06)<div class="syllabus"><a href="https://syllabus.ws.ryukoku.ac.jp/acrsw/CSylNoSSO/CNoSSO.do?i=Y001027010&amp;n=2025" class="syllabus-button" target="_blank" rel="noopener noreferrer">シラバス</a></div>
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">線形代数及び演習II</div>
+                    <div class="talk-meta">龍谷大学 (2025-09 ～ 2026-03)
+                    </div>
+                </div>
+                    </div>
+                </section>
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2024年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">セミナーI</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-09 ～ 2025-01)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">セミナーII</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-04 ～ 2024-07)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">プロジェクト演習</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-04 ～ 2024-07)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">基礎解析特論I</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-09 ～ 2024-11)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">基礎解析特論II</div>
+                    <div class="talk-meta">龍谷大学大学院 先端理工学研究科 (2024-11 ～ 2025-01)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">幾何入門</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-04 ～ 2024-05)<div class="syllabus"><a href="https://syllabus.ws.ryukoku.ac.jp/acrsw/CSylNoSSO/CNoSSO.do?i=Y001031010&amp;n=2025" class="syllabus-button" target="_blank" rel="noopener noreferrer">シラバス</a></div>
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">数理情報演習</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-04 ～ 2024-07)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">数理情報演習B</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-09 ～ 2025-01)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">線形代数及び演習Ⅱ</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2024-09 ～ 2025-01)
+                    </div>
+                </div>
+                    </div>
+                </section>
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2023年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">セミナーII</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2023-04 ～ 2023-09)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">ベクトル解析入門</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2023-04 ～ 2023-06)<div class="syllabus"><a href="https://syllabus.ws.ryukoku.ac.jp/acrsw/CSylNoSSO/CNoSSO.do?i=Y001040010&amp;n=2025" class="syllabus-button" target="_blank" rel="noopener noreferrer">シラバス</a></div>
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">幾何入門</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2023-04 ～ 2023-09)<div class="syllabus"><a href="https://syllabus.ws.ryukoku.ac.jp/acrsw/CSylNoSSO/CNoSSO.do?i=Y001031010&amp;n=2025" class="syllabus-button" target="_blank" rel="noopener noreferrer">シラバス</a></div>
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">応用数理A</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2023-04 ～ 2023-09)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">数理情報演習</div>
+                    <div class="talk-meta">龍谷大学 先端理工学部 (2023-04 ～ 2023-09)<div class="syllabus"><a href="https://syllabus.ws.ryukoku.ac.jp/acrsw/CSylNoSSO/CNoSSO.do?i=Y001027010&amp;n=2025" class="syllabus-button" target="_blank" rel="noopener noreferrer">シラバス</a></div>
+                    </div>
+                </div>
+                    </div>
+                </section>
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2021年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">数学演習I</div>
+                    <div class="talk-meta">名古屋大学 (2021-04 ～ 2021-08)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">数学演習II</div>
+                    <div class="talk-meta">名古屋大学 理学部 数理学科 (2021-10 ～ 2022-02)
+                    </div>
+                </div>
+                    </div>
+                </section>
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2020年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">数学演習II</div>
+                    <div class="talk-meta">名古屋大学 (2020-10 ～ 2021-03)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">数学演習V</div>
+                    <div class="talk-meta">名古屋大学 (2020-10 ～ 2021-03)
+                    </div>
+                </div>
+                <div class="talk-card">
+                    <div class="talk-title">数学演習VI</div>
+                    <div class="talk-meta">名古屋大学 (2020-10 ～ 2021-03)
+                    </div>
+                </div>
+                    </div>
+                </section>
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2017年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">数学演習A</div>
+                    <div class="talk-meta">中央大学 理工学部 数学科 (2017-04 ～ 2017-08)
+                    </div>
+                </div>
+                    </div>
+                </section>
+                <section class="lecture-year-block">
+                    <h3 class="lecture-year-heading">2012年度</h3>
+                    <div class="talks-grid lecture-year-grid">
+                <div class="talk-card">
+                    <div class="talk-title">物理II(b)</div>
+                    <div class="talk-meta">早稲田大学高等学院 (2012-09 ～ 2013-02)
+                    </div>
+                </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p>© 2026 藤原和将</p>
+        <p><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">ページトップへ</a></p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/tabs.js"></script>
+
+</body>
+</html>

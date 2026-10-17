@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="藤原和将のホームページ">
+    <meta name="keywords" content="藤原和将, 数学, 龍谷大学">
+    <meta property="og:description" content="藤原和将のホームページです。経歴や研究業績などを掲載しています。"/>
+    <title>藤原和将 - 龍谷大学</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../dark.css">
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="top-name">藤原 和将</div>
+        <div>
+            <button class="theme-toggle">ダークモード 🌙</button>
+            <a href="../index.html" class="language-switch">English</a>
+        </div>
+    </div>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-main" id="main-nav">
+                <a href="index.html" class="nav-link current">ホーム</a>
+                <a href="cv.html" class="nav-link">履歴書</a>
+                <a href="articles.html" class="nav-link">論文</a>
+                <a href="talks.html" class="nav-link">講演</a>
+                <a href="lectures.html" class="nav-link">講義</a>
+                <a href="notes.html" class="nav-link">ノート</a>
+                <a href="schedule.html" class="nav-link">予定</a>
+                <a href="links.html" class="nav-link">リンク</a>
+            </div>
+
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-tab-type="home">ホーム</button>
+                    <button class="conference-tab" data-tab-type="contact">連絡先</button>
+                    <button class="conference-tab" data-tab-type="external">外部ID</button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="content">
+
+        <div id="home-section" class="tab-section active">
+            <section class="current-position">
+                <h2>現在の所属</h2>
+                <div id="current-position">准教授<br>@ 先端理工学部 数理・情報科学課程<br>龍谷大学</div>
+            </section>
+
+            <section class="research-interests">
+                <h2>研究分野</h2>
+                <div id="research-interests"><div class="profile-text"><p>偏微分方程式と関連する不等式を研究しております。特に最近は、<br />半線型消散型波動方程式の時間大域可解性等<br />に就いて研究をしております。</p></div>
+                </div>
+            </section>
+
+            <section class="news">
+                <h2>お知らせ</h2>
+                <div id="news">
+                    <div class="card news-card">
+                        <div class="news-date">2026-09-22</div>
+                        <div class="news-content">ホームページの公開サーバーを移転しました。公開URLは <a href="https://fujiwara-kazumasa.math.ryukoku.ac.jp/">https://fujiwara-kazumasa.math.ryukoku.ac.jp/</a> です。</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2026-04-27</div>
+                        <div class="news-content">ダークモード管理を一元化し、予定ページのカレンダー構成を更新しました。京都駅前セミナーのカレンダーを追加し、登録不要のカレンダーは登録リンク一覧から非表示にしました。ResearchMap APIを項目別取得に切り替え、論文・講演のデータ取得漏れを解消しました。</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-06-05 16:17</div>
+                        <div class="news-content">論文情報を修正しました</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-25 20:47</div>
+                        <div class="news-content">論文情報が更新されました</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-08</div>
+                        <div class="news-content">ノート・数値シミュレーション・講義補助資料のタブを新設し、SPA型で動的に切り替えられるようになりました。MathJaxによる数式表示も強化されています。</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-07 15:25</div>
+                        <div class="news-content">論文情報が修正されました</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-06 19:02</div>
+                        <div class="news-content">教務経歴が修正されました</div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-date">2025-05-05</div>
+                        <div class="news-content">HPを更新しました。ResearchMapとの部分的な連携機能を追加しました</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="contact-section" class="tab-section">
+            <section class="contact">
+                <div class="section">
+                    <table class="record" id="contact-info">
+                        <tr valign="top">
+                            <td class="contact">研究室</td>
+                            <td>龍谷大学 瀬田学舎 1号館 501研究室</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="contact">住所</td>
+                            <td>滋賀県大津市瀬田大江町横谷1−5<br>〒520-2194</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="contact">電話</td>
+                            <td>077-543-7503</td>
+                        </tr>
+                        <tr valign="top">
+                            <td class="contact">連絡</td>
+                            <td class="contact-value"><a href="https://docs.google.com/forms/d/e/1FAIpQLSei82qCoVuWyqJpi9Hx4D_IN9TIiVnjvydtZ0NTaW_F8QCN7w/viewform" target="_blank" rel="noopener noreferrer">お問い合わせ（Googleフォーム）</a><br><span class="contact-note">メールアドレスはスパム対策のため非公開です。フォームよりご連絡ください。</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="external-section" class="tab-section">
+            <section class="external-ids">
+                <div id="external-ids">
+                    <div class="card external-id-card">
+                        <div class="external-id-label">researchmap</div>
+                        <div class="external-id-link"><a href="https://researchmap.jp/KazumasaFUJIWARA/?lang=japanese" target="_blank">https://researchmap.jp/KazumasaFUJIWARA/?lang=japanese</a></div>
+                    </div>
+                    <div class="card external-id-card">
+                        <div class="external-id-label">orcid</div>
+                        <div class="external-id-link"><a href="https://orcid.org/0000-0002-3796-4570" target="_blank">https://orcid.org/0000-0002-3796-4570</a></div>
+                    </div>
+                    <div class="card external-id-card">
+                        <div class="external-id-label">j_global</div>
+                        <div class="external-id-link"><a href="https://jglobal.jst.go.jp/detail?JGLOBAL_ID=201901020665418797" target="_blank">https://jglobal.jst.go.jp/detail?JGLOBAL_ID=201901020665418797</a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <footer>
+        <p>© 2026 藤原和将</p>
+        <p><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">ページトップへ</a></p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/tabs.js"></script>
+
+</body>
+</html>

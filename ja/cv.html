@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="藤原和将の履歴書">
+    <meta name="keywords" content="藤原和将, 数学, 龍谷大学, 履歴書">
+    <meta property="og:description" content="藤原和将の履歴書"/>
+    <title>履歴書 - 藤原和将</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../dark.css">
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="top-name">藤原 和将</div>
+        <div>
+            <button class="theme-toggle">ダークモード 🌙</button>
+            <a href="../cv.html" class="language-switch">English</a>
+        </div>
+    </div>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-main" id="main-nav">
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="cv.html" class="nav-link current">履歴書</a>
+                <a href="articles.html" class="nav-link">論文</a>
+                <a href="talks.html" class="nav-link">講演</a>
+                <a href="lectures.html" class="nav-link">講義</a>
+                <a href="notes.html" class="nav-link">ノート</a>
+                <a href="schedule.html" class="nav-link">予定</a>
+                <a href="links.html" class="nav-link">リンク</a>
+            </div>
+
+            <div class="nav-sub">
+                <div class="conference-tabs">
+                    <button class="conference-tab active" data-tab-type="basic">基本情報</button>
+                    <button class="conference-tab" data-tab-type="academic">学歴</button>
+                    <button class="conference-tab" data-tab-type="professional">職歴</button><button class="conference-tab" data-tab-type="grant">競争的資金</button>
+                    <button class="conference-tab" data-tab-type="organization">運営協力</button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="content">
+
+        <div id="basic-section" class="tab-section active">
+            <div class="card">
+                <table class="record" id="personal-info">
+                    <tr>
+                        <td class="record-title">姓</td>
+                        <td class="record">藤原 (FUJIWARA)</td>
+                    </tr>
+                    <tr>
+                        <td class="record-title">名</td>
+                        <td class="record">和将 (Kazumasa)</td>
+                    </tr>
+                    <tr>
+                        <td class="record-title">性別</td>
+                        <td class="record">男性</td>
+                    </tr>
+                    <tr>
+                        <td class="record-title">学位</td>
+                        <td class="record">博士（理学）</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="academic-section" class="tab-section">
+            <h2>研究分野</h2>
+            <div id="research-areas">
+                <div class="card">
+                    <strong>Natural sciences</strong> - Mathematical analysis<br>PDE Analysis
+                </div>
+            </div>
+            <h2>研究テーマ</h2>
+            <div class="interests-container" id="research-interests">
+                <div class="interest-card">消散型波動方程式</div>
+                <div class="interest-card">シュレディンガー方程式</div>
+                <div class="interest-card">分数階微分作用素</div>
+                <div class="interest-card">解の爆発現象</div>
+                <div class="interest-card">偏微分方程式</div>
+            </div>
+            <h2>学会</h2>
+            <div id="membership">
+                <div class="card">日本数学会</div>
+                <div class="card">The International Society for Analysis, its Applications and Computation (ISAAC)</div>
+            </div>
+            <h2>学位</h2>
+            <div id="academic-degrees">
+                <div class="card">
+                    <div class="cv-card-title">博士（理学）</div>
+                    <div class="cv-card-info">早稲田大学大学院 先進理工学研究科 物理学及応用物理学専攻</div><div class="cv-card-info">指導教員: 小澤 徹 先生</div>
+                    <div class="cv-card-date">2017-03-15</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">修士（理学）</div>
+                    <div class="cv-card-info">早稲田大学大学院 先進理工学研究科 物理学及応用物理学専攻</div><div class="cv-card-info">指導教員: 小澤 徹 先生</div>
+                    <div class="cv-card-date">2014-03-15</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">学士（工学）</div>
+                    <div class="cv-card-info">先進理工学部 応用物理学科</div><div class="cv-card-info">指導教員: 小澤 徹 先生</div>
+                    <div class="cv-card-date">2012-03-15</div>
+                </div>
+            </div>
+        </div>
+        <div id="professional-section" class="tab-section">
+            <div id="professional-positions">
+                <div class="card">
+                    <div class="cv-card-title">准教授</div>
+                    <div class="cv-card-info">
+                        龍谷大学
+                        先端理工学部 数理・情報科学課程
+                    </div>
+                    <div class="cv-card-date">2023-04</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">助教</div>
+                    <div class="cv-card-info">
+                        名古屋大学
+                        大学院多元数理科学研究科
+                    </div>
+                    <div class="cv-card-date">2020-10 -- 2023-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">特別研究員SPD</div>
+                    <div class="cv-card-info">
+                        日本学術振興会
+                        
+                    </div>
+                    <div class="cv-card-date">2019-04 -- 2020-09</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">Junior Visiting Position</div>
+                    <div class="cv-card-info">
+                        ピサ高等師範学校
+                        Ennio De Giorgi 数学研究所
+                    </div>
+                    <div class="cv-card-date">2017-10 -- 2019-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">非常勤講師</div>
+                    <div class="cv-card-info">
+                        中央大学
+                        📝担当：数学演習A
+                    </div>
+                    <div class="cv-card-date">2017-04 -- 2017-09</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">特別研究員 PD</div>
+                    <div class="cv-card-info">
+                        日本学術振興会
+                        
+                    </div>
+                    <div class="cv-card-date">2017-04 -- 2017-09</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">特別研究員 DC2</div>
+                    <div class="cv-card-info">
+                        日本学術振興会
+                        
+                    </div>
+                    <div class="cv-card-date">2016-04 -- 2017-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">特別研究員 DC1</div>
+                    <div class="cv-card-info">
+                        日本学術振興会
+                        
+                    </div>
+                    <div class="cv-card-date">2014-04 -- 2016-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">非常勤講師</div>
+                    <div class="cv-card-info">
+                        早稲田大学高等学院
+                        📝担当：物理II(b)
+                    </div>
+                    <div class="cv-card-date">2012-09 -- 2013-03</div>
+                </div>
+            </div>
+        </div>
+        <div id="grant-section" class="tab-section">
+            <div class="interests-container" id="grants">
+                <div class="card">
+                    <div class="cv-card-title">半線型消散型波動方程式の解の存在最大時刻の解明</div>
+                    <div class="cv-card-info">
+                        科学研究費助成事業 (若手研究) 24K16957<br>KAKEN <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24K16957">https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24K16957</a><br>📝<a href='https://www.jsps.go.jp/j-grantsinaid/36_dokuritsu_kiban/download.html'>独立基盤形成支援（試行）</a>
+                    </div>
+                    <div class="cv-card-date">2024-04 -- 2029-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">絶対値冪乗型の非線型項を伴うシュレディンガー方程式の解の爆発解析</div>
+                    <div class="cv-card-info">
+                        科学研究費助成事業 若手研究 (若手研究) 20K14337<br>KAKEN <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20K14337">https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20K14337</a>
+                    </div>
+                    <div class="cv-card-date">2020-04 -- 2023-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">絶対値冪乗型の非線型項を有する偏微分発展方程式の爆発現象の記述</div>
+                    <div class="cv-card-info">
+                        特別研究員奨励費 (SPD) 19J00334<br>受入れ研究機関: 早稲田大学<br>KAKEN <a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-19J00334/">https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-19J00334/</a>
+                    </div>
+                    <div class="cv-card-date">2019-04 -- 2022-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">半相対論的非線形場の数学的基礎</div>
+                    <div class="cv-card-info">
+                        特別研究員奨励費 (DC2) 16J30008<br>受入れ研究機関: 早稲田大学<br>KAKEN <a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-16J30008/">https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-16J30008/</a><br>📝育志賞
+                    </div>
+                    <div class="cv-card-date">2016-04 -- 2018-03</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">冪乗型の非線型項を伴う半相対論的方程式の初期値問題と関連する不等式の研究</div>
+                    <div class="cv-card-info">
+                        特別研究員奨励費 (DC1) 14J07371<br>受入れ研究機関: 早稲田大学<br>KAKEN <a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-14J07371/">https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-14J07371/</a>
+                    </div>
+                    <div class="cv-card-date">2014-04 -- 2017-03</div>
+                </div>
+            </div>
+            <h2>分担協力者</h2>
+            <div class="interests-container" id="grants-collaborator">
+                <div class="card">
+                    <div class="cv-card-title">波動場の臨界相互作用の解析</div>
+                    <div class="cv-card-info">
+                        科学研究費助成事業 (基盤研究(S)) 24H00024<br>KAKEN <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24H00024">https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-24H00024</a>
+                    </div>
+                    <div class="cv-card-date">2024-04 -- 2029-03</div>
+                </div>
+            </div>
+            <h2>その他</h2>
+            <div class="interests-container" id="grants-other">
+                <div class="card">
+                    <div class="cv-card-title">解の最大存在時間評価を介した非線形双曲型偏微分方程式の数学解析</div>
+                    <div class="cv-card-info">
+                        二国間交流事業 (中国(NSFC)との共同研究) 120257401
+                    </div>
+                    <div class="cv-card-date">2025-04 -- 2027-12</div>
+                </div>
+            </div>
+        </div>
+        <div id="organization-section" class="tab-section">
+            <div id="organization">
+                <div class="card">
+                    <div class="cv-card-title">PDE Workshop, Waseda -GSSI, L&#39;Aquila-Pisa</div>
+                    <div class="cv-card-date">2019年2月21日</div><div class="cv-card-info">Pisa大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">Workshop Dispersive properties of Schrodinger and wave equations with perturbation</div>
+                    <div class="cv-card-date">2018年9月5日</div><div class="cv-card-info">Pisa大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">Workshop on Harmonic Analysis and Nonliner Evolution Equations</div>
+                    <div class="cv-card-date">2018年2月23日</div><div class="cv-card-info">Pisa大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">京都駅前セミナー</div>
+                    <div class="cv-card-date">2023年4月--</div><div class="cv-card-info">龍谷大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">Mathematical Analysis of Nonlinear Dispersive and Wave Equations
+ - In honor of Professor Tohru Ozawa&#39;s 60th birthday -</div>
+                    <div class="cv-card-date">2022年1月--</div><div class="cv-card-info">早稲田大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">名古屋微分方程式研究集会</div>
+                    <div class="cv-card-date">2021年3月8日--2023年4月</div><div class="cv-card-info">名古屋大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">名古屋微分方程式セミナー</div>
+                    <div class="cv-card-date">2020年10月1日--2023年4月</div><div class="cv-card-info">名古屋大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">応用数理解析セミナー</div>
+                    <div class="cv-card-date">2019年4月1日--2020年9月31日</div><div class="cv-card-info">東北大学</div>
+                </div>
+                <div class="card">
+                    <div class="cv-card-title">Homepage of Grope Dispersive PDE</div>
+                    <div class="cv-card-date">2018年10月----</div>
+                </div>
+            </div>
+            <h2>地域支援</h2>
+            <div id="regional-support">
+                <div class="card">
+                    <div class="cv-card-title">関数ライブラリの中身</div>
+                    <div class="cv-card-info">数学アゴラ 名古屋大学大学院多元数理科学研究科</div>
+                    <div class="cv-card-date">2021-08-10 -- 2021-08-11</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p>© 2026 藤原和将</p>
+        <p><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">ページトップへ</a></p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/tabs.js"></script>
+
+</body>
+</html>

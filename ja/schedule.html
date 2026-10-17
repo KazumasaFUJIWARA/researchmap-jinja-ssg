@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="藤原和将の予定">
+    <meta name="keywords" content="藤原和将, 数学, 龍谷大学, 予定">
+    <title>予定 - 藤原和将</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../dark.css">
+    <script>
+        (function() {
+            try {
+                const theme = localStorage.getItem('theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            } catch (_) {}
+        })();
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="top-name">藤原 和将</div>
+        <div>
+            <button class="theme-toggle">ダークモード 🌙</button>
+            <a href="../index.html" class="language-switch">English</a>
+        </div>
+    </div>
+
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-main" id="main-nav">
+                <a href="index.html" class="nav-link">ホーム</a>
+                <a href="cv.html" class="nav-link">履歴書</a>
+                <a href="articles.html" class="nav-link">論文</a>
+                <a href="talks.html" class="nav-link">講演</a>
+                <a href="lectures.html" class="nav-link">講義</a>
+                <a href="notes.html" class="nav-link">ノート</a>
+                <a href="schedule.html" class="nav-link current">予定</a>
+                <a href="links.html" class="nav-link">リンク</a>
+            </div>
+
+            <div class="nav-sub">
+                <div class="conference-tabs" id="schedule-tabs">
+                    <button class="conference-tab active" data-tab="calendar">カレンダー</button>
+                    <button class="conference-tab" data-tab="links">カレンダー登録リンク</button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="content">
+
+        <div id="calendar-tab" class="tab-section active">
+            <div class="calendar-size-controls">
+                <label for="calendar-height">表示の高さ</label>
+                <input type="range" id="calendar-height" min="400" max="1400" step="50" value="800" aria-valuemin="400" aria-valuemax="1400">
+                <span id="calendar-height-value">800px</span>
+                <button type="button" id="calendar-height-reset" class="syllabus-button">リセット</button>
+            </div>
+            <div id="calendar-iframe">
+                <iframe src="https://calendar.google.com/calendar/embed?wkst=1&amp;bgcolor=%23616161&amp;ctz=Asia%2FTokyo&amp;src=c_54bd1de4eab01e8425f3c01b942c3f7961079dfadbcdd99b0223d0d23a956838%40group.calendar.google.com&amp;color=%23005500&amp;src=c_5add6f8cf34502d6ee3d9e72bf6618cc7b3f9861ca0fcdeb5c193ec0b498623b%40group.calendar.google.com&amp;color=%23E65100&amp;src=c_ca85887dd6128f33bce6ed0779c66471a9592b6fd40be6ffa24caf74ba18397b%40group.calendar.google.com&amp;color=%231565C0&amp;src=c_06817699bc91d39ad8c10289d889394db1c57b4dafa09028ff16b0bd79da5134%40group.calendar.google.com&amp;color=%236A1B9A&amp;src=mail.ryukoku.ac.jp_hl1ei45shs1knrpqnop4gndtbg%40group.calendar.google.com&amp;color=%23546E7A" title="予定カレンダー" width="100%" height="800" style="border:0" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div id="links-tab" class="tab-section">
+            <div id="calendar-links">
+                <div class="card calendar-card">
+                    <div style="font-weight:bold; margin-bottom:0.5em;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#005500;margin-right:6px;vertical-align:middle;"></span>担当講義</div>
+                    <div class="link-container"><button class="copy-button" data-copy="https://calendar.google.com/calendar/u/0?cid=c_54bd1de4eab01e8425f3c01b942c3f7961079dfadbcdd99b0223d0d23a956838%40group.calendar.google.com">コピー</button><span class="link-text">https://calendar.google.com/calendar/u/0?cid=c_54bd1de4eab01e8425f3c01b942c3f7961079dfadbcdd99b0223d0d23a956838%40group.calendar.google.com</span>
+                    </div>
+                </div>
+                <div class="card calendar-card">
+                    <div style="font-weight:bold; margin-bottom:0.5em;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#E65100;margin-right:6px;vertical-align:middle;"></span>京都駅前セミナー</div>
+                    <div class="link-container"><button class="copy-button" data-copy="https://calendar.google.com/calendar/u/0?cid=c_5add6f8cf34502d6ee3d9e72bf6618cc7b3f9861ca0fcdeb5c193ec0b498623b%40group.calendar.google.com">コピー</button><span class="link-text">https://calendar.google.com/calendar/u/0?cid=c_5add6f8cf34502d6ee3d9e72bf6618cc7b3f9861ca0fcdeb5c193ec0b498623b%40group.calendar.google.com</span>
+                    </div>
+                </div>
+                <div class="card calendar-card">
+                    <div style="font-weight:bold; margin-bottom:0.5em;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#546E7A;margin-right:6px;vertical-align:middle;"></span>[非公式] 龍谷大学(深草・大宮・瀬田学舎)</div>
+                    <div class="link-container">
+                    </div><div style="font-size:0.95em; color:#666; margin-top:0.5em;">樋口三郎先生より借用しております</div><div style="font-size:0.95em; color:#666; margin-top:0.5em;">出典：<a href="https://www.data.math.ryukoku.ac.jp/index.php#access" target="_blank" rel="noopener">https://www.data.math.ryukoku.ac.jp/index.php#access</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p>© 2026 藤原和将</p>
+        <p><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">ページトップへ</a></p>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/schedule-tabs.js"></script>
+
+</body>
+</html>
