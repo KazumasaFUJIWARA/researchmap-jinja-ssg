@@ -557,6 +557,11 @@
           "description": "本サイトのソースです。ResearchMap API をひな形にしたサイトを運用している場合の SSG 化の参考にしてください。ページ構成はリポジトリの README を参照。"
         },
         {
+          "title": "数学辞書",
+          "url": "https://github.com/KazumasaFUJIWARA/math-dic-jp",
+          "description": "第一版はClaude Opus 5.5 で、ワンショットで作成しました。"
+        },
+        {
           "title": "[非公式] 卒業論文のTeX/Typstスタイル",
           "url": "https://github.com/KazumasaFUJIWARA/rgt",
           "description": "予告なく書式を変更する可能性があります。"
